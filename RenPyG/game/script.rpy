@@ -3,7 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-# player will play as Jenus (j)
+# player will play as Janus (j)
 define j = Character("You")
 define h = Character("Himeko")
 define a = Character("Alex")
@@ -34,6 +34,7 @@ label start:
     with dissolve
     show Himeko
     "Hime is a girl who recently came from overseas, and is popular in part due to her long, straight, silky black hair."
+    hide Himeko
 
     # *back to the conversation*
     scene bg tree shade (background)
@@ -57,7 +58,7 @@ label start:
     # maybe add an animation for this scene? Otherwise just use what below this comment
     # scene bg tree shade (background)
     # with dissolve
-    # show Jenus liedown (character) at right
+    # show Janus liedown (character) at right
     # show Alex liedown (character) at left
     # "You and Alex lie down together for some time, enjoying the weather and making small talk."
     
@@ -66,7 +67,7 @@ label start:
     with dissolve
     play sound school bell noloop
     show Alex at left
-    show Jenus at right
+    show Janus at right
     a "Aw man… Already?"
     a "Welp, I guess I'll see you later then. Have fun with class, I know I won't!"
     j "Thanks. Good luck!"
@@ -74,16 +75,16 @@ label start:
     # *Alex jumps up from the shade and rushes into the distance as Janus slowly gets up and begrudgingly heads to class, missing the peace and quiet of the shade already.*
     # add an animation or do the following
     # hide Alex with moveoutleft
-    # hide Jenus with moveoutright
+    # hide Janus with moveoutright
 
     # *Transition to classroom scene*
     scene Classroom_Day
     "You mutter to yourself in between breaths as you lean your body against the desk, tired from your trek to the classroom."
-    show Jenus at left
+    show Janus at left
     j "Haaaa… Barely made it…"
     j "Maybe I should find a place closer to class next time… Then again, that would kind of defeat the whole purpose huh?"
     j "At least class today shouldn't be too difficult… It's such a good day for taking a nap too…"
-    hide Jenus
+    hide Janus
 
     scene bg sunshine_from_window
     with dissolve
@@ -91,9 +92,9 @@ label start:
     
     scene Classroom_Day
     with dissolve
-    show Jenus
+    show Janus
     j "Maybe another day though… I want to actually try to be productive today."
-    hide Jenus (sitting)
+    hide Janus (sitting)
     show Mrs. Adams
     ma "Alrighty, quiet down class."
     ma "I'm sure you've heard the news but we have a new student transferring into our class today."
@@ -111,8 +112,101 @@ label start:
     ma "She's new here and will greatly appreciate any help she can get."
     h "Thank you teacher."
     ma "Well then, here's your…"
+    hide Himeko
+    hide Mrs. Adams
 
+    show Janus
+    j "(It's such a lovely day today. I don't remember the last time the weather was this nice.)"
+    j "(Still, it feels unreal that we're getting a new classmate this late in the year. I wonder how things will work out for her…)"
+    hide Janus
+
+    show Mrs.Adams at left
+    show Himeko at right
+    ma "… There is a seat in the back available next to the window."
+    ma "anus, can you raise your hand?"
+
+    # *The mention of his name brings Janus’ mind back to reality as he raises his hand.*
+
+    ma "Thank you. I think that's all there is for now."
+    ma "Let me know if any issues arise or if you need help. I hope things work out well for you!"
+    h "Yes."
+    hide Mrs. Adams with moveoutleft
+    # *Himeko politely bows to the teacher before approaching her newly designated seat, sitting down quietly next to Janus and directing her gaze to front of the class, ready to receive instruction.*
+
+    h "Hey. Class is starting. You should wake up soon."
+
+    # *Himeko briefly whispers a few words to the boy beside her, stirring him up from his slumber.*
+    show Janus at left
+    j "Hmm? What's going-"
+    j "Ah-"
+    # *Janus quickly regains his bearings and whispers a quick gesture of thanks to his savior.*
+    j "Thank you. The weather has been too pleasant recently so I couldn't help myself… Aha…"
+    h "Don't mention it. I won't wake you up next time."
+    j "Noted."
     
+    hide Himeko
+    j "(So much for first impressions… Why did the weather have to be so nice today? Oh well. At least I’ll have plenty of time later today to appreciate it.)"
+    hide Janus
+
+    play sound school bell noloop
+    "After class"
+
+    Student A "Maan, I'm beat…"
+    Student B "I feel you. Why did we have to stay indoors today when the weather is so nice?"
+
+    "You silently chuckle to yourself, glad knowing that you aren't the sole person carrying that sentiment."
+
+    show Janus at left
+    j "(Hmmm… I'll be able to finish my work pretty quickly today so I'll have some free time on my hands. Maybe I should check up on Alex some time today if he's not busy?)"
+    hide Janus
+
+    scene (an influx of students)
+    with dissolve
+    "It was then that you noticed an influx of students headed towards your direction, your confusion quickly going away when you realized Himeko was sitting next to you."
+    
+    show Janus at left
+    j "(Ahh, she's probably going to get grilled today. After all, she's been quite the hot topic these past couple days.)"
+    j "(Well, I'm sure she'll be able to handle it. She seems really composed and mature.)"
+    hide Janus
+    
+    "The students congregate around Himeko's desk, eager to ask her questions like “How does your daily hair routine look like?” or “Are you currently seeing someone?” before a loud voice silences them."
+    
+    show Vanessa at left
+    v "Hey! One at a time! You'll overwhelm the poor girl."
+    hide Vanessa
+
+    scene bg somebg (background when introducing someone)
+    with dissolve
+    show Vanessa
+    "The girl whose voice is able to control the unruly class is Vanessa, a very popular student with plenty of admirers. She also has a crush on Alex."
+    hide Vanessa
+
+    scene (an influx of students)
+    with dissolve
+    show Vanessa at left
+    show Himeko at right
+    h "Thank you."
+    "Himeko lets out a brief sigh of relief before thanking her savior, then proceeding to answer her classmates' questions in a more civilized manner."
+    hide Vanessa
+    hide Himeko
+
+    show Janus
+    j "(Speaking of, it's almost lunch time isn't it? I should probably start heading off…)"
+    hide Janus
+
+    scene School_Hallway_Day
+    with dissolve
+    show Janus
+    "You head off towards the cafeteria, sparing a glance back at his classmates' antics and quietly giggling to yourself."
+    hide Janus
+
+    scene Cafeteria_Day
+
+    show Janus
+    "Your stomach growling as you put on a hairnet."
+    j "(It really sucks working here sometimes. Sometimes I wish I could just eat already, but someone's got to pay the bills.)"
+
+
 
     # This ends the game.
 
