@@ -34,6 +34,7 @@ label start:
     with dissolve
     show Himeko
     "Hime is a girl who recently came from overseas, and is popular in part due to her long, straight, silky black hair."
+    hide Himeko
 
     # *back to the conversation*
     scene bg tree shade (background)
@@ -144,9 +145,66 @@ label start:
     j "Noted."
     
     hide Himeko
-    hide Janus
-    show Janus
     j "(So much for first impressions… Why did the weather have to be so nice today? Oh well. At least I’ll have plenty of time later today to appreciate it.)"
+    hide Janus
+
+    play sound school bell noloop
+    "After class"
+
+    Student A "Maan, I'm beat…"
+    Student B "I feel you. Why did we have to stay indoors today when the weather is so nice?"
+
+    "You silently chuckle to yourself, glad knowing that you aren't the sole person carrying that sentiment."
+
+    show Janus at left
+    j "(Hmmm… I'll be able to finish my work pretty quickly today so I'll have some free time on my hands. Maybe I should check up on Alex some time today if he's not busy?)"
+    hide Janus
+
+    scene (an influx of students)
+    with dissolve
+    "It was then that you noticed an influx of students headed towards your direction, your confusion quickly going away when you realized Himeko was sitting next to you."
+    
+    show Janus at left
+    j "(Ahh, she's probably going to get grilled today. After all, she's been quite the hot topic these past couple days.)"
+    j "(Well, I'm sure she'll be able to handle it. She seems really composed and mature.)"
+    hide Janus
+    
+    "The students congregate around Himeko's desk, eager to ask her questions like “How does your daily hair routine look like?” or “Are you currently seeing someone?” before a loud voice silences them."
+    
+    show Vanessa at left
+    v "Hey! One at a time! You'll overwhelm the poor girl."
+    hide Vanessa
+
+    scene bg somebg (background when introducing someone)
+    with dissolve
+    show Vanessa
+    "The girl whose voice is able to control the unruly class is Vanessa, a very popular student with plenty of admirers. She also has a crush on Alex."
+    hide Vanessa
+
+    scene (an influx of students)
+    with dissolve
+    show Vanessa at left
+    show Himeko at right
+    h "Thank you."
+    "Himeko lets out a brief sigh of relief before thanking her savior, then proceeding to answer her classmates' questions in a more civilized manner."
+    hide Vanessa
+    hide Himeko
+
+    show Janus
+    j "(Speaking of, it's almost lunch time isn't it? I should probably start heading off…)"
+    hide Janus
+
+    scene School_Hallway_Day
+    with dissolve
+    show Janus
+    "You head off towards the cafeteria, sparing a glance back at his classmates' antics and quietly giggling to yourself."
+    hide Janus
+
+    scene Cafeteria_Day
+
+    show Janus
+    "Your stomach growling as you put on a hairnet."
+    j "(It really sucks working here sometimes. Sometimes I wish I could just eat already, but someone's got to pay the bills.)"
 
 
 
