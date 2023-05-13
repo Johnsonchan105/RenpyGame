@@ -3,7 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-# player will play as Jenus (j)
+# player will play as Janus (j)
 define j = Character("You")
 define h = Character("Himeko")
 define a = Character("Alex")
@@ -57,7 +57,7 @@ label start:
     # maybe add an animation for this scene? Otherwise just use what below this comment
     # scene bg tree shade (background)
     # with dissolve
-    # show Jenus liedown (character) at right
+    # show Janus liedown (character) at right
     # show Alex liedown (character) at left
     # "You and Alex lie down together for some time, enjoying the weather and making small talk."
     
@@ -66,7 +66,7 @@ label start:
     with dissolve
     play sound school bell noloop
     show Alex at left
-    show Jenus at right
+    show Janus at right
     a "Aw man… Already?"
     a "Welp, I guess I'll see you later then. Have fun with class, I know I won't!"
     j "Thanks. Good luck!"
@@ -74,16 +74,16 @@ label start:
     # *Alex jumps up from the shade and rushes into the distance as Janus slowly gets up and begrudgingly heads to class, missing the peace and quiet of the shade already.*
     # add an animation or do the following
     # hide Alex with moveoutleft
-    # hide Jenus with moveoutright
+    # hide Janus with moveoutright
 
     # *Transition to classroom scene*
     scene Classroom_Day
     "You mutter to yourself in between breaths as you lean your body against the desk, tired from your trek to the classroom."
-    show Jenus at left
+    show Janus at left
     j "Haaaa… Barely made it…"
     j "Maybe I should find a place closer to class next time… Then again, that would kind of defeat the whole purpose huh?"
     j "At least class today shouldn't be too difficult… It's such a good day for taking a nap too…"
-    hide Jenus
+    hide Janus
 
     scene bg sunshine_from_window
     with dissolve
@@ -91,9 +91,9 @@ label start:
     
     scene Classroom_Day
     with dissolve
-    show Jenus
+    show Janus
     j "Maybe another day though… I want to actually try to be productive today."
-    hide Jenus (sitting)
+    hide Janus (sitting)
     show Mrs. Adams
     ma "Alrighty, quiet down class."
     ma "I'm sure you've heard the news but we have a new student transferring into our class today."
@@ -111,8 +111,44 @@ label start:
     ma "She's new here and will greatly appreciate any help she can get."
     h "Thank you teacher."
     ma "Well then, here's your…"
+    hide Himeko
+    hide Mrs. Adams
 
+    show Janus
+    j "(It's such a lovely day today. I don't remember the last time the weather was this nice.)"
+    j "(Still, it feels unreal that we're getting a new classmate this late in the year. I wonder how things will work out for her…)"
+    hide Janus
+
+    show Mrs.Adams at left
+    show Himeko at right
+    ma "… There is a seat in the back available next to the window."
+    ma "anus, can you raise your hand?"
+
+    # *The mention of his name brings Janus’ mind back to reality as he raises his hand.*
+
+    ma "Thank you. I think that's all there is for now."
+    ma "Let me know if any issues arise or if you need help. I hope things work out well for you!"
+    h "Yes."
+    hide Mrs. Adams with moveoutleft
+    # *Himeko politely bows to the teacher before approaching her newly designated seat, sitting down quietly next to Janus and directing her gaze to front of the class, ready to receive instruction.*
+
+    h "Hey. Class is starting. You should wake up soon."
+
+    # *Himeko briefly whispers a few words to the boy beside her, stirring him up from his slumber.*
+    show Janus at left
+    j "Hmm? What's going-"
+    j "Ah-"
+    # *Janus quickly regains his bearings and whispers a quick gesture of thanks to his savior.*
+    j "Thank you. The weather has been too pleasant recently so I couldn't help myself… Aha…"
+    h "Don't mention it. I won't wake you up next time."
+    j "Noted."
     
+    hide Himeko
+    hide Janus
+    show Janus
+    j "(So much for first impressions… Why did the weather have to be so nice today? Oh well. At least I’ll have plenty of time later today to appreciate it.)"
+
+
 
     # This ends the game.
 
