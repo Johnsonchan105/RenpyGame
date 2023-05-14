@@ -206,6 +206,144 @@ label start:
     "Your stomach growling as you put on a hairnet."
     j "(It really sucks working here sometimes. Sometimes I wish I could just eat already, but someone's got to pay the bills.)"
 
+    "Janus finishes donning his work attire just as students start pouring into the cafeteria, beginning a long day of serving food to them."
+
+    "A while later..."
+
+    "Janus is still immersed in his work when he suddenly hears a familiar voice call out to him."
+    
+    show Alex at left
+    a "Hey Jane!"
+
+    "Janus silently palms his forehead before forcing a smile and looking at his friend."
+    
+    j "Hello Alex. What may I get you today?"
+
+    a "Dude, you don’t have to be so formal you know? I’m your friend."
+
+    j "Yes, but this is my job after all. Besides, I thought I told you not to call me that."
+
+    a "Sorry bro, couldn't help myself. Can I get a meatball sub though? I’m pretty damn hungry and am in the mood for one."
+
+    j "Sure. One second."
+
+    "As Janus prepares a sub for his friend, he is suddenly interrupted by Alex"
+
+    a "Uhhh… Actually, hold that thought. I see David and his cronies. I better get going-"
+
+    j "Ahhh, gotcha. Later then?"
+
+    a "Sounds good, see you soon-"
+
+    "Alex quickly evacuates himself from the cafeteria just as a group of imposing figures enter, the lively atmosphere visibly dampening upon their arrival."
+
+    hide Alex with fade
+
+    show Janus at right
+    show David at center
+    show Sam at left
+
+    "The head of the group approaches Janus, towering over him as he grumbles something under his breath."
+
+    d "Seen your friend around?"
+
+    j "Sorry, he just left. May I interest you in something on our menu instead?"
+
+    d "Forget it. Nothing on this menu tastes good anyway. Also, when are you gonna get a damn haircut? That mop of yours ain’t doing you any good."
+
+    "Janus bites his lip as he maintains his composure, the instigator luckily losing interest quickly as he turns around and directs his group."
+
+    d "Come on, let’s get going."
+
+    s "Are you sure David? We’re pretty tired and hungry-"
+
+    d "Shut it. I don’t need to remind you of your position do I?"
+
+    s "S-sorry. Apologies. Didn’t mean to."
+
+    d "Good. We’re off then."
+
+    "The group promptly leaves the cafeteria, the resulting atmosphere becoming quite awkward before its former liveliness picks up again."
+    
+    hide David
+    hide Sam
+
+    "Janus releases a breath he was holding before muttering to himself."
+
+    j "(What a group. Thinking they can get away with anything just because their leader is rich. Makes me wonder how they even ended up like that in the first place.)"
+
+    "Janus calms down a bit before resuming his duties, thinking to himself all the while."
+
+    j "(I should check up on Alex after my shift. Seems like something happened, and whenever David’s involved, it’s not a good sign. Hopefully the weather will still be nice by then.)"
+
+    "The rest of lunch goes by without a hitch as the students enjoy themselves in the cafeteria."
+
+    hide Janus
+
+    scene School_Roof
+    "Janus makes his way to the school rooftop, only to see Alex crouched by the corner."
+    show Janus at right
+    show Alex at left
+    "Janus rushes over to his friend only to see various bruises on him, clearly a sign of a scuffle."
+    show Janus at center
+
+    j "Alex! Are you ok? What happened?"
+
+    a "Ugh… Don’t shake me like that Jane. I’m still sore all over."
+
+    j "Oh-"
+
+    j "Sorry. Just what the hell happened to you?"
+
+    "Janus starts tending to his friend’s wounds as Alex starts recounting today’s events."
+
+    a "It’s a bit of a long story, but basically, you know Vanessa? That one popular girl? Well we’ve actually known each other for a while, and she tried asking me out today. Unfortunately, David had her eye on her, and, well, you can probably figure out the rest. Also, why the hell do you have all these medical supplies on you-"
+
+    a "OUCH! That hurt dammit!"
+
+    j "Sorry. Had to make sure the wound was disinfected."
+
+    a "You’re good. Just wish it didn’t have to hurt so much. Speaking of, you’re really good at this."
+
+    j "Haha… You pick up a few things here and there when you live alone. No worries though, I’m used to it."
+
+    a "Ah damn, didn’t mean to bring it up."
+
+    j "Like I said, I don’t mind. Are there any other injuries I’m missing?"
+
+    a "I think it’s all good. Thanks doc!"
+
+    j "No problem. Also, here’s your meatball sub from earlier."
+
+    "Janus hands Alex a neatly wrapped package, still warm to the touch."
+    
+    a "Aw thanks man! I really needed a pick-me-up right about now. Can always count on you to have my back!"
+
+    j "Yeah…"
+
+    "The two talk and laugh their troubles away as the sun starts to fade."
+
+    scene Nighttime
+
+    show Janus at center
+
+    "Janus makes it to his room as he gets ready for bed, lying down and thinking about today’s events."
+
+    j "(If only something could be done about it, huh? Haa… If only miracles came true more often)."
+
+    "Janus then falls into a deep slumber as he thinks of the upcoming day."
+    
+    hide Janus with fade
+
+    "....."
+    "....."
+
+    scene Forest
+
+    show Janus at center
+
+    
+
 
 
     # This ends the game.
