@@ -12,6 +12,7 @@ define s = Character("Sam")
 define v = Character("Vanessa")
 define g - Character("Gwen")
 define ma = Character("Mrs. Adams")
+define p = Character("Principal")
 
 # The game starts here.
 
@@ -338,11 +339,121 @@ label start:
     "....."
     "....."
 
-    scene Forest
+    scene Daytime
+    show Janus with zoomin
+    "Janus jolts awake, drenched in sweat and his entire nervous system ablaze as he tries to calm his breathing and nerves."
 
-    show Janus at center
+    j "(Haa… Haa… It was just a nightmare. It’s been a while since I’ve dreamt, especially one that bad.)"
 
+    "Later that day..."
+
+    scene Hallway
+    show Janus at right
+    "The school was abuzz as Janus arrived on campus, students moving to and fro as commotion filled the halls."
+    show Alex at left
+    a "Yo Jane! Good to see you’re doing alright! Pretty sure the commotion’s getting to you, huh?"
+
+    j "Yeah… Good to see you’re still alive Alex! Did something happen? It’s way too noisy…"
+
+    a "Oh yeah, I forget you’re pretty busy all the time so you must’ve not heard. Anyways, I don’t know the full details, but apparently David’s not here so his dad’s been pretty frantic. The school seems to be pretty happy though, with The Dark Lord all gone and stuff for now."
+
+    j "Ohhh, so that's what happened… No wonder why I’ve been seeing so many smiles lately."
+
+    a "This calls for a celebration!"
+
+    j "But we have class soon-"
+ 
+    a "DOESN’T MATTER, THE DARK LORD HAS BEEN DEFEATED!!!"
+
+    "Alex gently shoves his friend towards the rooftop, away from the crowd."
+
+    scene Rooftop
+    show Janus at right
+    show Alex at left
+
+    "Alex hands Janus a warm and delicious smelling package, shortly after Janus’ stomach growls."
+
+    j "Alex…"
+
+    a "Consider this a thanks for yesterday. Besides, I figured you needed it."
+
+    j "Thanks for the meal, I’ll make sure to return the favor."
+
+    a "It’s on the house. Better eat quick though, classes should be starting soon."
+
+    j "I told you…"
+
+    "Janus happily wolfs down the meal his friend bought for him, making small talk between bites before heading back to their respective homerooms."
+
+    scene Classroom
+
+    show Janus at right
+    show Himeko at left
+
+    h "You look like you’ve seen better days."
+
+    "Janus quickly composes himself when he realizes someone is talking to him."
+
+    j "Sorry, I didn't expect that. Himeko, right?"
+
+    h "Yup!"
+
+    j "Sorry about my classmates yesterday, they’re good people, just overly excited."
+
+    h "No worries. I understand. Thank you for giving me space yesterday."
+
+    j "Mhm. How are you finding school so far?"
+
+    h "A bit boring. Easy if you overlook the language difference. I wish it was a little quieter though."
+
+    j "Haha… I get you…"
+
+    h "Anyways, class is about to start. Make sure you don’t doze off."
+
+    "They both refocus their attention on class as the bell signifies the start of the school day."
+
+    "..."
+
+    "After class"
+
+    "The students get ready to leave homeroom before Mr. Adams stops them."
+
+    ma "Janus? Himeko? Can you please go to the principal’s office? You’ve been requested there."
+
+    "Janus and Himeko exchange confused glances as they nod their heads and start walking towards the principal's office"
+
+    scene Principal_Office
+
+    show Janus at left
+    show Himeko at right
+    show Principal at center
+
+    j "Principal? Did you call?"
+
+    p "Ah yes, I did. You two have been called in regarding Mr. David. We were wondering if you have seen him or have any information regarding his whereabouts."
+
+    j "I saw him at the cafeteria yesterday but haven’t really seen him since. Did something happen?"
+
+    p "His family hasn’t seen him so I’ve been “asked” to see if the school knows anything about it."
+
+    "Himeko looks a bit lost, so I quickly explain to her how David’s family provides a lot of funding for the school, at which, she nods her head in realization."
+
+    h "So that’s how it is…"
+
+    p "Well, if anything pops up, please let us know."
+
+    j "Understood."
+
+    "The principal dismisses us as some other students are called, resulting in a peaceful remainder of the day."
+
+    scene Cafeteria
+    show Janus at right
+    "Not many people come by the cafe at night, so Janus is idly spacing out until he sees a group of students enter."
+    show Vanessa at left
+    j "(Ohh, it’s Vanessa and her friends. She seems to be in a pretty good mood so I guess her and Alex are going on a date soon. I hope that goes well for them…)"
     
+
+
 
 
 
