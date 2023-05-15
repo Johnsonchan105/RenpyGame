@@ -4,7 +4,7 @@
 # name of the character.
 
 # player will play as Janus (j)
-define j = Character("You")
+define j = Character("Janus")
 define h = Character("Himeko")
 define a = Character("Alex")
 define d = Character("David")
@@ -13,6 +13,8 @@ define v = Character("Vanessa")
 define g - Character("Gwen")
 define ma = Character("Mrs. Adams")
 define p = Character("Principal")
+define vf = Character("Vanessa's Friends")
+define ja = Character("Jack")
 
 # The game starts here.
 
@@ -324,7 +326,7 @@ label start:
 
     "The two talk and laugh their troubles away as the sun starts to fade."
 
-    scene Nighttime
+    scene Dorm_nighttime
 
     show Janus at center
 
@@ -339,7 +341,7 @@ label start:
     "....."
     "....."
 
-    scene Daytime
+    scene Dorm_daytime
     show Janus with zoomin
     "Janus jolts awake, drenched in sweat and his entire nervous system ablaze as he tries to calm his breathing and nerves."
 
@@ -451,12 +453,288 @@ label start:
     "Not many people come by the cafe at night, so Janus is idly spacing out until he sees a group of students enter."
     show Vanessa at left
     j "(Ohh, it’s Vanessa and her friends. She seems to be in a pretty good mood so I guess her and Alex are going on a date soon. I hope that goes well for them…)"
-    
 
+    v "Oh hey, it's Alex’s friend. How’s it going?"
 
+    j "Oh hey Vanessa. It’s going alright. What may I get for you today?"
 
+    v "Always so formal aren’t you? Anyways, I’d like a strawberry parfait, while my friends here would like…"
 
+    "Janus gets their food ready as they sit down, the boy overhearing some gossip as he gets their food ready."
 
-    # This ends the game.
+    vf "So, are you actually interested in him, Vanessa"
 
+    v "I mean, a little I guess? His family’s quite rich though."
+
+    vf "WOW. You sure are heartless sometimes aren’t you? I never would have suspected it."
+
+    "The group quiets down as Janus gives them their orders, before leaving with a polite smile."
+
+    vf "Aren’t you worried about his friend? They say he’s cursed. People around him go missing like his parents, you know?"
+
+    v "And you believe that? I may be many things but I’m not superstitious you know… Besides, he’s a pretty easy guy to fool. Man barely has a life outside his work and studies."
+
+    "The group chuckles at Vanessa’s words, unaware that Janus is listening in from a distance as he pretends to preoccupy himself."
+
+    vf "If you’re after money why not David? He’s rich."
+
+    v "Yeah but he’s kind of a jerk. Even I have my limits you know…"
+
+    "A long night at the cafe ensues, filled with laughter and an increasingly frustrated Janus."
+
+    scene Dorm_nighttime
+    show Janus at center
+
+    j " Finally… Home…"
+
+    "Janus plops onto the bed, nearly knocking out had it not been for the events that transpired in the cafeteria."
+
+    j "(I hope Alex can see through her facade tomorrow… Then again, he’s not the brightest bulb there is…)"
+
+    "Janus audibly groans in frustration before deciding to call it a day, burying himself under the covers and hoping things turn out well."
+
+    scene Dorm_daytime
+    show Janus at center
+
+    "Saturday"
+
+    "Janus wakes up in the afternoon, groggily texting his friend good luck with his date before heading back to bed."
+
+    j "(Is it just me or am I more tired recently? Sure, I may have been working and skipped a few meals, but it’s nothing I haven’t done before, so why am I so exhausted and sore? Ugh, my head hurts… I’ll have to make sure to restock on medication some time this week…)"
+
+    "Janus continues lying in bed as he receives a message back a while later, Alex apparently having been stood up."
+
+    j "(That’s odd… I thought for sure she’d be there… Maybe something happened?)"
+
+    "(I’m glad nothing bad happened to Alex, but I can’t help but worry about Vanessa, and possibly David. Maybe I’ll see them in class in a few days? Anyways, I have got to rest up, my head and body are killing me...)"
+
+    "..."
+
+    "Sunday"
+
+    "Janus wakes up late in the afternoon, head splitting from pain as he tries to recall information."
+
+    j "(There’s no way I slept an entire day. I’m sure I got up at some point, but I can’t remember… Ugh, can this damn headache stop?)"
+
+    "Janus relaxingly makes himself dinner, spending the remainder of his weekend catching up on work and hobbies before preparing for another grueling week of school."
+
+    "..."
+
+    scene Hallway
+    show Janus at right
+
+    "The entire school is in murmurs, nowhere near the excitement present on Friday as Janus confusingly makes his way to Alex, soon finding him."
+
+    show Alex at left
+
+    j "Alex!"
+
+    a "Jane!"
+
+    "They smile and shake each other's hands, catching up with one another before addressing the issue at hand."
+
+    j "Hey, do you know why everyone looks so… gloomy?"
+
+    a "Seriously…? Did you not check your emails?"
+
+    j "I’ve sorta been out of it this weekend… Haha…"
+
+    a "What am I gonna do with you…"
+
+    "Alex quickly explains to Janus how no one has seen David and Vanessa, and that authorities have gotten involved."
+
+    a "Apparently, they’re bringing students in for questioning too… Jane… I’m scared… What if they suspect me of something? I had a date with her, you know?"
+
+    j "You’ll be fine Alex, I can vouch for your innocence."
+
+    a "Thanks Jane… Still nerve-wracking, you know? First the principal and now this…"
+
+    j "I get you…"
+
+    "Janus sees his friend off with more words of encouragement as he prepares for homeroom."
+
+    scene Classroom 
+    show Janus at right
+    show Mrs. Adams at center
+    ma  " As of today, classes will be canceled for the foreseeable future due to the ongoing investigation. Today’s class is for the purpose of informing you of future policies and plans, as well as…"
+
+    "Mr. Adams informs of how things will be running much to the joy (and dismay) of the students, before ending class early so students could head to their dorms. However, before Janus could leave, he hears a voice call out for him."
+    hide Mrs. Adams
+    show Himeko at left
+
+    h "Janus."
+
+    j "Hm? What’s up Himeko?"
+
+    h "My dorm. Follow me. I need help. I’ll explain later, just follow me."
+
+    "The girl takes his hand and drags him with her, seemingly unfazed by the glances they receive as Janus quietly succumbs to his fate, too tired to put up much of a fight."
+
+    scene Dorm_daytime
+    show Janus at right
+    show Himeko at left
+
+    j "So Himeko, what’s the issue you needed help with?"
+
+    "The two awkwardly sit opposing one another before Himeko decides to speak."
+
+    h "Was it you?"
+
+    j "Excuse me?"
+
+    h "The disappearances."
+
+    j "Umm… What?"
+
+    h "I’m asking if you’re the reason why David and Vanessa are missing."
+
+    j "Umm… No? Hold up, I’m very confused right now-"
+
+    h "You don’t seem to be lying, but I could’ve sworn I saw you in the forest."
+
+    j "In the forest? Why would I be in the forest?"
+
+    h "I told myself that too, and believed my eyes were playing tricks on me, until I saw you there again. That couldn’t have been a coincidence, no?"
+
+    j "I’ve never gone into the forest before though?"
+
+    h "Let’s go together then. I want to see if my eyes are telling the truth."
+
+    h "Also, no is not an option. I’ll confront law enforcement if you don’t comply."
+
+    j "You can be really scary at times, you know that-?"
+
+    "Himeko’s lips curve slightly upwards as her gaze pierces Janus."
+
+    h "Why thank you."
+
+    j "That’s not a compliment you know… Also, why not report this to law enforcement in the first place?"
+
+    "Himeko’s lips give way to a small smile upon hearing this."
+
+    h "You’re an interesting guy. I want to trust you and get to know more about you."
+
+    j "Why thanks, I would’ve been really happy hearing that in a different situation…"
+
+    scene Forest_night
+
+    show Janus at center
+    show Himeko at right
+
+    j "Remind me why I’m the one walking first again?"
+
+    h "Safety reasons."
+
+    j "Do you know where we’re going? My head is aching…"
+
+    h "Yes. Don’t worry. We’ll be there soon."
+
+    "The two venture deeper into the forest, Janus’ headache getting worse as Himeko eggs him in the right direction."
+
+    j "Are you sure we’re there yet? Feels like we’re heading in circles."
+
+    h "I am sure. We’re close."
+
+    "The two press onwards, eventually encountering an obscure grove that seems to have met little human interaction."
+
+    h "This is the place."
+
+    scene Grove
+
+    "Janus slowly makes his way in, the sight he sees making his heart drop and blood run cold: two crude gravestones adorned with dried blood."
+    show grave at center
+    show Janus at right
+
+    "The next thing he sees is darkness."
+
+    scene Black_Screen
+    "....."
+    "....."
+    show Janus at center
+    j "(Am I in a dream again? What’s going on? And why does this bloody headache get worse every damn time?)"
+
+    "Janus’ headache intensifies as flashbacks of distant memories resurface. Of his dying mother, of his missing dad, and now the forest."
+
+    j "(Just what is going on… Someone… Help me… It hurts and I’m scared…)"
+
+    ??? "Don’t worry Jane, I’ll keep us safe…"
+
+    j "Huh…? Who are you? Why do you know my name?"
+
+    ??? "Remember, Jane… You know who I am… After all, I’ve always been with you…"
+
+    "Janus’ head threatens to split open as more memories start to pour in. Fragmented images of his parents, of David, of Vanessa, and countless other events."
+
+    ??? "Remember who always watches you from the shadows… Who makes your dreams come true… Who keeps you safe and happy…"
+
+    ??? "I’m Jack… And I’m also you…"
+
+    scene Grove
+    show Jack at left
+    show Janus at right
+    show Himeko at center
+
+    "Janus bolts awake, sweat pouring out of him like crazy as he hyperventilates, noticing a body next to him."
+
+    ja "It’s already too late Jane… She tried to stop us… We had no choice…"
+
+    j "No… This can’t be…"
+
+    "Himeko’s eyes are wide open, blood flowing from the corners of her lips as she struggles to breathe."
+
+    j "HIMEKO!!!"
+
+    "Janus rushes over to her, quickly opening his bag for medical supplies and trying to staunch the bleeding."
+
+    ja "What are you doing Jane…? Saving her would ruin the both of us… Do you know how hard I’ve worked for us?"
+
+    "He ignores the voice in his head as tears run down his face, every part of his body burning as he desperately tries to save his new classmate."
+
+    ja "Everything I’ve done was for the both of us! Who got rid of David when no one could? Who stopped Vanessa from ruining your friend? It was me! I made all your wishes come true! No one else but me!"
+
+    j "Stop… I don’t want your help! YOU KILLED THEM!"
+
+    ja "Jack: Isn’t that what you wanted as well? For them to stop, just like dad?"
+
+    j "No… No… No… Not like this… This can’t be happening… Get out of my head… GET OUT!"
+
+    "Janus' hands don’t stop moving as he hurriedly applies first aid to his classmate, the paleness of her skin accelerating with each passing second."
+
+    ja "Silly Jane, I’m a part of you as much as you are me… Why do you try to save her still? You’ll only bring about the end of both of us you know?"
+
+    j "I don’t care! I’d happily let that happen if it’d keep others safe! I don’t want to live a life that I can’t be proud of!"
+
+    "Himeko’s pulse barely felt as Jane rushes to finish his first aid."
+
+    ja "Stop! Do you want to throw away everything we’ve worked for? Everything we’ve lived for? If it weren’t for me, we would’ve never had the strength to change our future for the better! I was born from you! Born to make your unrealized desires reality! And now you want to oppose me? I wouldn’t have even existed if you had the strength and courage to fight for yourself!"
+
+    j "I, I-"
+
+    ja "If you let her live, your life as you know it will end. I’m sorry for hurting her, but we had no choice! Trust me Jane, you need me. Without me, you would’ve never been able to escape that hellhole years ago. Without me, dad would’ve killed you as well! I’m a part of you Jane, the only one you can truly trust, the only who can truly make you safe and happy. So stop Jane, for your sake, for both our sakes, so that everything we’ve ever worked for isn’t thrown away."
+
+    jump choices
+
+menu choices:
+    "Stop the First Aid":
+        jump ending1
+    "Continue the First Aid":
+        jump ending2
+
+label ending1:
+    scene Grove
+    show Jack at center
+    ja "That’s it Jane. Let me handle it, as I’ve always have. I’ll make this world a better place for the both of us. Go and take a long nap…"
+    scene Black_Screen with fade
+    "The end"
     return
+label ending2:
+    scene Grove
+    show Janus at left
+    show Himeko at center
+    show Jack at right
+    ja "So that’s your choice… Foolish and arrogant until the very end… At least that’s the first time you didn’t run away… Well done…"
+    hide Jack with fade
+    show Police at right
+    "The end"
+    return
+
