@@ -16,11 +16,29 @@ define p = Character("Principal")
 define vf = Character("Vanessa's Friends")
 define ja = Character("Jack")
 
+image Dorm_Day:
+    "Bedroom_Day.png"
+image Dorm_Night:
+    "Bedroom_Night_Dark.png"
+image Cafeteria:
+    "Cafeteria_Day.png"
+image Hallway:
+    "School_Hallway_Day.png"
+image Street_Spring:
+    "Street_Spring_Day.png"
+image Rooftop:
+    "Rooftop_Day.png"
+image Principle_Office:
+    "Principle_Office.jpeg"
+    xzoom 2.4
+    yzoom 1.8
+
+
 # The game starts here.
 
 label start:
     # *Game starts off with Janus lying down under the shade of a tree as Alex joins him.*
-    scene bg tree shade (background)
+    scene Street_Spring
     with dissolve
     show Janus at right
     show Alex at left
@@ -28,7 +46,7 @@ label start:
     j "Ah, sorry about that. Homeroom was a bit noisy today and the weather outside looked really pleasant so I couldn’t help myself."
     j "Also, please stop calling me Jane. People are gonna get misunderstandings."
     a "Sorry, no can do. Blame yourself for keeping that mop of hair atop your head."
-    a "Things almost as long as Hime's hair for Christ's sake!"
+    a "Things almost as long as Himeko's hair for Christ's sake!"
     hide Janus
     hide Alex
 
@@ -36,11 +54,11 @@ label start:
     scene bg somebg (background when introducing someone)
     with dissolve
     show Himeko
-    "Hime is a girl who recently came from overseas, and is popular in part due to her long, straight, silky black hair."
+    "Himeko is a girl who recently came from overseas, and is popular in part due to her long, straight, silky black hair."
     hide Himeko
 
     # *back to the conversation*
-    scene bg tree shade (background)
+    scene Street_Spring
     with dissolve
     show Janus at right
     show Alex at left
@@ -66,9 +84,9 @@ label start:
     # "You and Alex lie down together for some time, enjoying the weather and making small talk."
     
     # *sound of a bell interrupts them, signaling them to go to class.*
-    scene bg tree shade (background)
+    scene Street_Spring
     with dissolve
-    play sound school bell noloop
+    # play sound school bell noloop
     show Alex at left
     show Janus at right
     a "Aw man… Already?"
@@ -87,29 +105,19 @@ label start:
     j "Haaaa… Barely made it…"
     j "Maybe I should find a place closer to class next time… Then again, that would kind of defeat the whole purpose huh?"
     j "At least class today shouldn't be too difficult… It's such a good day for taking a nap too…"
-    hide Janus
-
-    scene bg sunshine_from_window
-    with dissolve
-    "You bask in the gentle and warm sunlight entering through the window as the bell rings to signify the beginning of class."
-    
-    scene Classroom_Day
-    with dissolve
-    show Janus
     j "Maybe another day though… I want to actually try to be productive today."
-    hide Janus (sitting)
+    hide Janus 
     show Mrs. Adams
     ma "Alrighty, quiet down class."
     ma "I'm sure you've heard the news but we have a new student transferring into our class today."
     ma "Make sure you treat her nicely ok?"
     hide Mrs. Adams
     show Himeko with moveinleft at left
-    "As if on cue, a Japanese beauty enters the classroom, her luscious black hair being blown back from the light autumn wind."
+    "As if on cue, Himeko enters the classroom, her luscious black hair being blown back from the light autumn wind."
     "The entire class stares at her in awe as she faces the class and starts to introduce herself."
     h "My English isn't the best. Nor are my conversational skills."
     h "I hope we have a pleasant time together."
     "The entire class remains silent, partly due to the strangeness of her introduction."
-    # want to add an image of ellipsis to show the class is silent
     show Mrs. Adams at right
     ma "Well class, be sure to be nice to Miss Himeko ok?"
     ma "She's new here and will greatly appreciate any help she can get."
@@ -126,9 +134,9 @@ label start:
     show Mrs.Adams at left
     show Himeko at right
     ma "… There is a seat in the back available next to the window."
-    ma "anus, can you raise your hand?"
+    ma "Janus, can you raise your hand?"
 
-    # *The mention of his name brings Janus’ mind back to reality as he raises his hand.*
+    "The mention of his name brings Janus’ mind back to reality as he raises his hand."
 
     ma "Thank you. I think that's all there is for now."
     ma "Let me know if any issues arise or if you need help. I hope things work out well for you!"
@@ -197,13 +205,13 @@ label start:
     j "(Speaking of, it's almost lunch time isn't it? I should probably start heading off…)"
     hide Janus
 
-    scene School_Hallway_Day
+    scene Hallway
     with dissolve
     show Janus
     "You head off towards the cafeteria, sparing a glance back at his classmates' antics and quietly giggling to yourself."
     hide Janus
 
-    scene Cafeteria_Day
+    scene Cafeteria
 
     show Janus
     "Your stomach growling as you put on a hairnet."
@@ -283,7 +291,7 @@ label start:
 
     hide Janus
 
-    scene School_Roof
+    scene Rooftop
     "Janus makes his way to the school rooftop, only to see Alex crouched by the corner."
     show Janus at right
     show Alex at left
@@ -326,7 +334,7 @@ label start:
 
     "The two talk and laugh their troubles away as the sun starts to fade."
 
-    scene Dorm_nighttime
+    scene Dorm_Night
 
     show Janus at center
 
@@ -341,7 +349,7 @@ label start:
     "....."
     "....."
 
-    scene Dorm_daytime
+    scene Dorm_Day
     show Janus with zoomin
     "Janus jolts awake, drenched in sweat and his entire nervous system ablaze as he tries to calm his breathing and nerves."
 
@@ -482,7 +490,7 @@ label start:
 
     "A long night at the cafe ensues, filled with laughter and an increasingly frustrated Janus."
 
-    scene Dorm_nighttime
+    scene Dorm_Night
     show Janus at center
 
     j " Finally… Home…"
@@ -493,7 +501,7 @@ label start:
 
     "Janus audibly groans in frustration before deciding to call it a day, burying himself under the covers and hoping things turn out well."
 
-    scene Dorm_daytime
+    scene Dorm_Day
     show Janus at center
 
     "Saturday"
@@ -570,7 +578,7 @@ label start:
 
     "The girl takes his hand and drags him with her, seemingly unfazed by the glances they receive as Janus quietly succumbs to his fate, too tired to put up much of a fight."
 
-    scene Dorm_daytime
+    scene Dorm_Day
     show Janus at right
     show Himeko at left
 
