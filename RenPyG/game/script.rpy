@@ -14,7 +14,7 @@ define g - Character("Gwen")
 define ma = Character("Mrs. Adams")
 define p = Character("Principal")
 define vf = Character("Vanessa's Friends")
-define ja = Character("Jack")
+define ja = Character("Jack") #hi
 
 image Dorm_Day:
     "Bedroom_Day.png"
