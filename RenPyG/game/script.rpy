@@ -32,7 +32,16 @@ image Principle_Office:
     "Principle_Office.jpeg"
     xzoom 2.4
     yzoom 1.8
-
+image Forest_Night:
+    "Forest_Night.jpeg"
+    xzoom 2.4
+    yzoom 1.8
+image Black_Screen:
+    "Black_Screen.jpeg"
+    yzoom 2
+image Grove:
+    "grove.jpeg"
+    y zoom 2
 
 # The game starts here.
 
@@ -51,7 +60,7 @@ label start:
     hide Alex
 
     # *a scene of introducing Himeko*
-    scene bg somebg (background when introducing someone)
+    scene Rooftop
     with dissolve
     show Himeko
     "Himeko is a girl who recently came from overseas, and is popular in part due to her long, straight, silky black hair."
@@ -65,38 +74,16 @@ label start:
     j "Haha… I guess I can't argue with you there… Speaking of, she's transferring into our classes today isn't she?"
     a "That's right! I heard that her parents are super rich, but that's besides that point."
     j "Anyways, did something happen? It's not too often you come seek me out like this."
-    # *Brief monologue discussing how Alex is quite popular whereas Janus is quite the opposite.*
     a "Haha… You know… It gets a little stifling when talk goes around so it's nice taking a page from your book every once in a while."
     j "I'll take that as a compliment from the oh-so-popular Prince Charming."
     a "Hey! It's tough being this attractive you know? Sometimes I wish I didn't have so many eyes on me, like you."
     j "Heh. I mean, it gets kinda boring and lonely at times, but at least it's relatively peaceful."
     a "Man… What I wouldn't do for some peace sometimes."
     j "Agreed."
-    hide Janus
-    hide Alex
-
-    # *The two lie down together for some time, enjoying the weather and making small talk*
-    # maybe add an animation for this scene? Otherwise just use what below this comment
-    # scene bg tree shade (background)
-    # with dissolve
-    # show Janus liedown (character) at right
-    # show Alex liedown (character) at left
-    # "You and Alex lie down together for some time, enjoying the weather and making small talk."
-    
-    # *sound of a bell interrupts them, signaling them to go to class.*
-    scene Street_Spring
-    with dissolve
-    # play sound school bell noloop
-    show Alex at left
-    show Janus at right
+    "sound of a bell interrupts them, signaling them to go to class."
     a "Aw man… Already?"
     a "Welp, I guess I'll see you later then. Have fun with class, I know I won't!"
     j "Thanks. Good luck!"
-
-    # *Alex jumps up from the shade and rushes into the distance as Janus slowly gets up and begrudgingly heads to class, missing the peace and quiet of the shade already.*
-    # add an animation or do the following
-    # hide Alex with moveoutleft
-    # hide Janus with moveoutright
 
     # *Transition to classroom scene*
     scene Classroom_Day
@@ -142,7 +129,7 @@ label start:
     ma "Let me know if any issues arise or if you need help. I hope things work out well for you!"
     h "Yes."
     hide Mrs. Adams with moveoutleft
-    # *Himeko politely bows to the teacher before approaching her newly designated seat, sitting down quietly next to Janus and directing her gaze to front of the class, ready to receive instruction.*
+    "Himeko politely bows to the teacher before approaching her newly designated seat, sitting down quietly next to Janus and directing her gaze to front of the class."
 
     h "Hey. Class is starting. You should wake up soon."
 
@@ -150,7 +137,7 @@ label start:
     show Janus at left
     j "Hmm? What's going-"
     j "Ah-"
-    # *Janus quickly regains his bearings and whispers a quick gesture of thanks to his savior.*
+    "Janus quickly regains his bearings and whispers a quick gesture of thanks to his savior."
     j "Thank you. The weather has been too pleasant recently so I couldn't help myself… Aha…"
     h "Don't mention it. I won't wake you up next time."
     j "Noted."
@@ -159,40 +146,35 @@ label start:
     j "(So much for first impressions… Why did the weather have to be so nice today? Oh well. At least I’ll have plenty of time later today to appreciate it.)"
     hide Janus
 
-    play sound school bell noloop
     "After class"
 
     Student A "Maan, I'm beat…"
     Student B "I feel you. Why did we have to stay indoors today when the weather is so nice?"
 
-    "You silently chuckle to yourself, glad knowing that you aren't the sole person carrying that sentiment."
-
     show Janus at left
-    j "(Hmmm… I'll be able to finish my work pretty quickly today so I'll have some free time on my hands. Maybe I should check up on Alex some time today if he's not busy?)"
-    hide Janus
 
-    scene (an influx of students)
-    with dissolve
+    "Janus silently chuckle to himself, glad knowing that he isn't the sole person carrying that sentiment."
+
+    j "(Hmmm… I'll be able to finish my work pretty quickly today so I'll have some free time on my hands. Maybe I should check up on Alex some time today if he's not busy?)"
+
     "It was then that you noticed an influx of students headed towards your direction, your confusion quickly going away when you realized Himeko was sitting next to you."
     
-    show Janus at left
+    show Himeko at right
     j "(Ahh, she's probably going to get grilled today. After all, she's been quite the hot topic these past couple days.)"
     j "(Well, I'm sure she'll be able to handle it. She seems really composed and mature.)"
-    hide Janus
     
     "The students congregate around Himeko's desk, eager to ask her questions like “How does your daily hair routine look like?” or “Are you currently seeing someone?” before a loud voice silences them."
     
-    show Vanessa at left
+    show Vanessa at center
     v "Hey! One at a time! You'll overwhelm the poor girl."
-    hide Vanessa
 
-    scene bg somebg (background when introducing someone)
+    scene Rooftop
     with dissolve
     show Vanessa
     "The girl whose voice is able to control the unruly class is Vanessa, a very popular student with plenty of admirers. She also has a crush on Alex."
     hide Vanessa
 
-    scene (an influx of students)
+    scene Classroom
     with dissolve
     show Vanessa at left
     show Himeko at right
@@ -624,7 +606,7 @@ label start:
 
     j "Why thanks, I would’ve been really happy hearing that in a different situation…"
 
-    scene Forest_night
+    scene Forest_Night
 
     show Janus at center
     show Himeko at right
@@ -743,6 +725,7 @@ label ending2:
     ja "So that’s your choice… Foolish and arrogant until the very end… At least that’s the first time you didn’t run away… Well done…"
     hide Jack with fade
     show Police at right
+    scene Black_Screen with fade
     "The end"
     return
 
