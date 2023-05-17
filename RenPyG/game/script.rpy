@@ -11,10 +11,22 @@ define d = Character("David")
 define s = Character("Sam")
 define v = Character("Vanessa")
 define g - Character("Gwen")
-define ma = Character("Mrs. Adams")
+define ma = Character("Mrs.Adams")
 define p = Character("Principal")
 define vf = Character("Vanessa's Friends")
-define ja = Character("Jack") #hi
+define ja = Character("Jack") 
+
+image Janus = "person.webp"
+image Himeko = "person.webp"
+image Alex = "person.webp"
+image David = "person.webp"
+image Sam = "person.webp"
+image Vanessa = "person.webp"
+image Gwen = "person.webp"
+image Janus = "person.webp"
+image Principal = "person.webp"
+image Admans = "person.webp"
+image Jack = "person.webp"
 
 image Dorm_Day:
     "Bedroom_Day.png"
@@ -94,24 +106,24 @@ label start:
     j "At least class today shouldn't be too difficult… It's such a good day for taking a nap too…"
     j "Maybe another day though… I want to actually try to be productive today."
     hide Janus 
-    show Mrs. Adams
+    show Adams
     ma "Alrighty, quiet down class."
     ma "I'm sure you've heard the news but we have a new student transferring into our class today."
     ma "Make sure you treat her nicely ok?"
-    hide Mrs. Adams
+    hide Adams
     show Himeko with moveinleft at left
     "As if on cue, Himeko enters the classroom, her luscious black hair being blown back from the light autumn wind."
     "The entire class stares at her in awe as she faces the class and starts to introduce herself."
     h "My English isn't the best. Nor are my conversational skills."
     h "I hope we have a pleasant time together."
     "The entire class remains silent, partly due to the strangeness of her introduction."
-    show Mrs. Adams at right
+    show Adams at right
     ma "Well class, be sure to be nice to Miss Himeko ok?"
     ma "She's new here and will greatly appreciate any help she can get."
     h "Thank you teacher."
     ma "Well then, here's your…"
     hide Himeko
-    hide Mrs. Adams
+    hide Adams
 
     show Janus
     j "(It's such a lovely day today. I don't remember the last time the weather was this nice.)"
@@ -128,7 +140,7 @@ label start:
     ma "Thank you. I think that's all there is for now."
     ma "Let me know if any issues arise or if you need help. I hope things work out well for you!"
     h "Yes."
-    hide Mrs. Adams with moveoutleft
+    hide Adams with moveoutleft
     "Himeko politely bows to the teacher before approaching her newly designated seat, sitting down quietly next to Janus and directing her gaze to front of the class."
 
     h "Hey. Class is starting. You should wake up soon."
@@ -545,11 +557,11 @@ label start:
 
     scene Classroom 
     show Janus at right
-    show Mrs. Adams at center
+    show Adams at center
     ma  " As of today, classes will be canceled for the foreseeable future due to the ongoing investigation. Today’s class is for the purpose of informing you of future policies and plans, as well as…"
 
     "Mr. Adams informs of how things will be running much to the joy (and dismay) of the students, before ending class early so students could head to their dorms. However, before Janus could leave, he hears a voice call out for him."
-    hide Mrs. Adams
+    hide Adams
     show Himeko at left
 
     h "Janus."
