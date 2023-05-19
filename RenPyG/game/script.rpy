@@ -10,24 +10,25 @@ define a = Character("Alex")
 define d = Character("David")
 define s = Character("Sam")
 define v = Character("Vanessa")
-define g - Character("Gwen")
+define g = Character("Gwen")
 define ma = Character("Mrs.Adams")
 define p = Character("Principal")
 define vf = Character("Vanessa's Friends")
 define ja = Character("Jack") 
 
-image Janus = "person.webp"
-image Himeko = "person.webp"
-image Alex = "person.webp"
-image David = "person.webp"
-image Sam = "person.webp"
-image Vanessa = "person.webp"
-image Gwen = "person.webp"
-image Janus = "person.webp"
-image Principal = "person.webp"
-image Admans = "person.webp"
-image Jack = "person.webp"
+image Janus = "janus_smile_one.png"
+image Himeko = "himeko_smile_one.png"
+image Alex = "alex_smile_one.png"
+image David = "david_smile_one.png"
+image Sam = "sam_smile_one.png"
+image Vanessa = "vanessa_smile_one.png"
+#image Gwen = "alex_smile_one.png"
+image Principal = "alex_smile_one.png"
+image Admans = "adams_smile_one.png"
+image Jack = "janus_smile_one.png"
 
+image Classroom_Day:
+    "Classroom_Day.png"
 image Dorm_Day:
     "Bedroom_Day.png"
 image Dorm_Night:
@@ -111,7 +112,7 @@ label start:
     ma "I'm sure you've heard the news but we have a new student transferring into our class today."
     ma "Make sure you treat her nicely ok?"
     hide Adams
-    show Himeko with moveinleft at left
+    show Himeko with moveinleft 
     "As if on cue, Himeko enters the classroom, her luscious black hair being blown back from the light autumn wind."
     "The entire class stares at her in awe as she faces the class and starts to introduce herself."
     h "My English isn't the best. Nor are my conversational skills."
@@ -130,7 +131,7 @@ label start:
     j "(Still, it feels unreal that we're getting a new classmate this late in the year. I wonder how things will work out for her…)"
     hide Janus
 
-    show Mrs.Adams at left
+    show Adams at left
     show Himeko at right
     ma "… There is a seat in the back available next to the window."
     ma "Janus, can you raise your hand?"
@@ -140,7 +141,7 @@ label start:
     ma "Thank you. I think that's all there is for now."
     ma "Let me know if any issues arise or if you need help. I hope things work out well for you!"
     h "Yes."
-    hide Adams with moveoutleft
+    hide Adams with moveoutleft 
     "Himeko politely bows to the teacher before approaching her newly designated seat, sitting down quietly next to Janus and directing her gaze to front of the class."
 
     h "Hey. Class is starting. You should wake up soon."
@@ -659,17 +660,17 @@ label start:
 
     j "(Just what is going on… Someone… Help me… It hurts and I’m scared…)"
 
-    ??? "Don’t worry Jane, I’ll keep us safe…"
+    Unknown "Don’t worry Jane, I’ll keep us safe…"
 
     j "Huh…? Who are you? Why do you know my name?"
 
-    ??? "Remember, Jane… You know who I am… After all, I’ve always been with you…"
+    Unknown "Remember, Jane… You know who I am… After all, I’ve always been with you…"
 
     "Janus’ head threatens to split open as more memories start to pour in. Fragmented images of his parents, of David, of Vanessa, and countless other events."
 
-    ??? "Remember who always watches you from the shadows… Who makes your dreams come true… Who keeps you safe and happy…"
+    Unknown "Remember who always watches you from the shadows… Who makes your dreams come true… Who keeps you safe and happy…"
 
-    ??? "I’m Jack… And I’m also you…"
+    Unknown "I’m Jack… And I’m also you…"
 
     scene Grove
     show Jack at left
