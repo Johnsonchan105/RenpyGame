@@ -25,10 +25,10 @@ image Alex = "alex_smile_one.png"
 image David = "david_smile_one.png"
 image Sam = "sam_smile_one.png"
 image Vanessa = "vanessa_smile_one.png"
-#image Gwen = "alex_smile_one.png"
 image Principal = "principal.png"
 image Adams = "adams_smile_one.png"
 image Jack = "janus_smile_one.png"
+image grave = "grave.png"
 
 image Classroom_Day:
     "Classroom_Day.png"
