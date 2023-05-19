@@ -713,11 +713,13 @@ label start:
 
     "Himeko’s pulse barely felt as Jane rushes to finish his first aid."
 
-    ja "Stop! Do you want to throw away everything we’ve worked for? Everything we’ve lived for? If it weren’t for me, we would’ve never had the strength to change our future for the better! I was born from you! Born to make your unrealized desires reality! And now you want to oppose me? I wouldn’t have even existed if you had the strength and courage to fight for yourself!"
+    ja "Stop! Do you want to throw away everything we’ve worked for? Everything we’ve lived for? If it weren’t for me, we would’ve never had the strength to change our future for the better!"
+    ja "I was born from you! Born to make your unrealized desires reality! And now you want to oppose me? I wouldn’t have even existed if you had the strength and courage to fight for yourself!"
 
     j "I, I-"
 
-    ja "If you let her live, your life as you know it will end. I’m sorry for hurting her, but we had no choice! Trust me Jane, you need me. Without me, you would’ve never been able to escape that hellhole years ago. Without me, dad would’ve killed you as well! I’m a part of you Jane, the only one you can truly trust, the only who can truly make you safe and happy. So stop Jane, for your sake, for both our sakes, so that everything we’ve ever worked for isn’t thrown away."
+    ja "If you let her live, your life as you know it will end. I’m sorry for hurting her, but we had no choice! Trust me Jane, you need me. Without me, you would’ve never been able to escape that hellhole years ago. "
+    ja "Without me, dad would’ve killed you as well! I’m a part of you Jane, the only one you can truly trust, the only who can truly make you safe and happy. So stop Jane, for your sake, for both our sakes, so that everything we’ve ever worked for isn’t thrown away."
 
     jump choices
 
