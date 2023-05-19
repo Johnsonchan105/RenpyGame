@@ -29,6 +29,7 @@ image Principal = "principal.png"
 image Adams = "adams_smile_one.png"
 image Jack = "janus_smile_one.png"
 image grave = "grave.png"
+image Police = "police.png"
 
 image Classroom_Day:
     "Classroom_Day.png"
