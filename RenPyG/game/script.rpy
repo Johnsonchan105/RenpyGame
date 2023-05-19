@@ -26,8 +26,8 @@ image David = "david_smile_one.png"
 image Sam = "sam_smile_one.png"
 image Vanessa = "vanessa_smile_one.png"
 #image Gwen = "alex_smile_one.png"
-image Principal = "alex_smile_one.png"
-image Admans = "adams_smile_one.png"
+image Principal = "principal.png"
+image Adams = "adams_smile_one.png"
 image Jack = "janus_smile_one.png"
 
 image Classroom_Day:
