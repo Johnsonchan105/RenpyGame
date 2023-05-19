@@ -15,6 +15,9 @@ define ma = Character("Mrs.Adams")
 define p = Character("Principal")
 define vf = Character("Vanessa's Friends")
 define ja = Character("Jack") 
+define s_a = Character("Student A")
+define s_b = Character("Student B")
+define u = Character("Unknown")
 
 image Janus = "janus_smile_one.png"
 image Himeko = "himeko_smile_one.png"
@@ -54,7 +57,8 @@ image Black_Screen:
     yzoom 2
 image Grove:
     "grove.jpeg"
-    y zoom 2
+    yzoom 2
+    xzoom 3
 
 # The game starts here.
 
@@ -161,8 +165,8 @@ label start:
 
     "After class"
 
-    Student A "Maan, I'm beat…"
-    Student B "I feel you. Why did we have to stay indoors today when the weather is so nice?"
+    s_a "Maan, I'm beat…"
+    s_b "I feel you. Why did we have to stay indoors today when the weather is so nice?"
 
     show Janus at left
 
@@ -187,8 +191,7 @@ label start:
     "The girl whose voice is able to control the unruly class is Vanessa, a very popular student with plenty of admirers. She also has a crush on Alex."
     hide Vanessa
 
-    scene Classroom
-    with dissolve
+    scene Classroom_Day
     show Vanessa at left
     show Himeko at right
     h "Thank you."
@@ -390,7 +393,7 @@ label start:
 
     "Janus happily wolfs down the meal his friend bought for him, making small talk between bites before heading back to their respective homerooms."
 
-    scene Classroom
+    scene Classroom_Day
 
     show Janus at right
     show Himeko at left
@@ -427,7 +430,7 @@ label start:
 
     "Janus and Himeko exchange confused glances as they nod their heads and start walking towards the principal's office"
 
-    scene Principal_Office
+    scene Principle_Office
 
     show Janus at left
     show Himeko at right
@@ -556,7 +559,7 @@ label start:
 
     "Janus sees his friend off with more words of encouragement as he prepares for homeroom."
 
-    scene Classroom 
+    scene Classroom_Day
     show Janus at right
     show Adams at center
     ma  " As of today, classes will be canceled for the foreseeable future due to the ongoing investigation. Today’s class is for the purpose of informing you of future policies and plans, as well as…"
@@ -660,17 +663,17 @@ label start:
 
     j "(Just what is going on… Someone… Help me… It hurts and I’m scared…)"
 
-    Unknown "Don’t worry Jane, I’ll keep us safe…"
+    u "Don’t worry Jane, I’ll keep us safe…"
 
     j "Huh…? Who are you? Why do you know my name?"
 
-    Unknown "Remember, Jane… You know who I am… After all, I’ve always been with you…"
+    u "Remember, Jane… You know who I am… After all, I’ve always been with you…"
 
     "Janus’ head threatens to split open as more memories start to pour in. Fragmented images of his parents, of David, of Vanessa, and countless other events."
 
-    Unknown "Remember who always watches you from the shadows… Who makes your dreams come true… Who keeps you safe and happy…"
+    u "Remember who always watches you from the shadows… Who makes your dreams come true… Who keeps you safe and happy…"
 
-    Unknown "I’m Jack… And I’m also you…"
+    u "I’m Jack… And I’m also you…"
 
     scene Grove
     show Jack at left
