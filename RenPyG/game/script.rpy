@@ -19,17 +19,38 @@ define s_a = Character("Student A")
 define s_b = Character("Student B")
 define u = Character("Unknown")
 
-image Janus = "janus_smile_one.png"
-image Himeko = "himeko_smile_one.png"
-image Alex = "alex_smile_one.png"
-image David = "david_smile_one.png"
-image Sam = "sam_smile_one.png"
-image Vanessa = "vanessa_smile_one.png"
-image Principal = "principal.png"
-image Adams = "adams_smile_one.png"
-image Jack = "janus_smile_one.png"
-image grave = "grave.png"
-image Police = "police.png"
+image Janus:
+    "janus_smile_one.png"
+    zoom 0.5
+image Himeko:
+    "himeko_smile_one.png"
+    zoom 0.5
+image Alex:
+    "alex_smile_one.png"
+    zoom 0.5
+image David:
+    "david_smile_one.png"
+    zoom 0.5
+image Sam:
+    "sam_smile_one.png"
+    zoom 0.5
+image Vanessa:
+    "vanessa_smile_one.png"
+    zoom 0.5
+image Principal:
+    "principal.png"
+    zoom 0.5
+image Adams:
+    "adams_smile_one.png"
+    zoom 0.5
+image Jack:
+    "janus_smile_one.png"
+    zoom 0.5
+image grave:
+    "grave.png"
+image Police:
+    "police.png"
+    zoom 1.5
 
 image Classroom_Day:
     "Classroom_Day.png"
