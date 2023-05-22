@@ -62,7 +62,7 @@ image Grove:
     xzoom 3
 
 # The game starts here.
-
+#hello
 label start:
     # *Game starts off with Janus lying down under the shade of a tree as Alex joins him.*
     scene Street_Spring
