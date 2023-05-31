@@ -574,10 +574,9 @@ label start:
 
     a "What am I gonna do with you…"
 
-    "Alex quickly explains to Janus how no one has seen David and Vanessa, and that authorities have gotten involved."
+    "Alex quickly explains to Janus how no one has seen David, and that authorities have gotten involved."
 
-    a "Apparently, they’re bringing students in for questioning too… Jane… I’m scared… What if they suspect me of something? I had a date with her, you know?"
-
+    a "Apparently, they’re bringing students in for questioning too… Jane… I’m scared… What if they suspect me of something?"
     j "You’ll be fine Alex, I can vouch for your innocence."
 
     a "Thanks Jane… Still nerve-wracking, you know? First the principal and now this…"
@@ -674,7 +673,7 @@ label start:
 
     scene Grove
 
-    "Janus slowly makes his way in, the sight he sees making his heart drop and blood run cold: two crude gravestones adorned with dried blood."
+    "Janus slowly makes his way in, the sight he sees making his heart drop and blood run cold: one crude gravestone adorned with dried blood."
     show grave at center
     show Janus at right
 
@@ -723,7 +722,7 @@ label start:
 
     "He ignores the voice in his head as tears run down his face, every part of his body burning as he desperately tries to save his new classmate."
 
-    ja "Everything I’ve done was for the both of us! Who got rid of David when no one could? Who stopped Vanessa from ruining your friend? It was me! I made all your wishes come true! No one else but me!"
+    ja "Everything I’ve done was for the both of us! Who got rid of David when no one could? It was me! I made all your wishes come true! No one else but me!"
 
     j "Stop… I don’t want your help! YOU KILLED THEM!"
 
@@ -745,7 +744,8 @@ label start:
     j "I, I-"
 
     ja "If you let her live, your life as you know it will end. I’m sorry for hurting her, but we had no choice! Trust me Jane, you need me. Without me, you would’ve never been able to escape that hellhole years ago. "
-    ja "Without me, dad would’ve killed you as well! I’m a part of you Jane, the only one you can truly trust, the only who can truly make you safe and happy. So stop Jane, for your sake, for both our sakes, so that everything we’ve ever worked for isn’t thrown away."
+    ja "Without me, dad would’ve killed you as well! I’m a part of you Jane, the only one you can truly trust, the only who can truly make you safe and happy." 
+    ja "So stop Jane, for your sake, for both our sakes, so that everything we’ve ever worked for isn’t thrown away."
 
     jump choices
 
@@ -772,7 +772,7 @@ label Himeko_dies:
 
     j "This can’t be – I was just in the woods with Himeko. How is it 3 AM right now?"
 
-    "Memories of David, Vanessa, and Himeko come flashing back. The final look of fear on David’s face ... "
+    "Memories of David and Himeko come flashing back. The final look of fear on David’s face ... "
 
     j "He killed Them. Jack killed Them... No..."
 
@@ -780,7 +780,7 @@ label Himeko_dies:
 
     "Janus couldn't sleep that night. He laid wide awake in bed, curled up and shivering as he recalled repeatde the events of the night. Why is this all happening?"
 
-    jump Himeko_dies_day3
+    jump Himeko_dies_day_three
 
 label Himeko_lives:
     scene Grove
@@ -793,9 +793,124 @@ label Himeko_lives:
     j "I have to get her to the nurse, quickly."
 
     "Janus carries Himeko to the end of the forest. One of the teachers is probably doing their patrols. They’ll find Himeko and get her care.."
-    
+
     jump Himeko_lives_day_three
 
     scene Black_Screen with fade
 
-label Himeko_dies_day3:
+label Himeko_dies_day_three:
+    scene Black_Screen
+    "School Announcement “Due to the disappearance of students, there is now a curfew. All students must be in their dorm rooms by nighttime. An official detective has been called and is expected to arrive by tomorrow."
+    "Every student will be sharply questioned regarding the disappearances.”"
+    scene Rooftop
+    show Alex at left
+    show Janus at right
+    a "Janus! There you are! Did you hear the news? Himeko is now missing too."
+
+    j "I know – I mean yeah…their disappearances must be linked together."
+
+    a "Yeah just be careful at night! Any one of us could be next."
+
+    j "And what about you? I haven’t heard from you these past few nights. Hanging out with your new girlfriend?"
+
+    a "Yeah I’ve been– wait a minute are you jealous?"
+
+    j "It feels like you’ve forgotten about me since Vanessa confessed to you!"
+
+    a "Hey I’m allowed to have a relationship aren’t I? But I suppose now is not the time to be sneaking out to see her. She said she heard a rumor."
+
+    a "Apparently David’s parents are furious. They can’t accept the fact their little demon is gone. The school is going to find a scapegoat to detain."
+
+    "Janus feels the color leaving his face."
+
+    j "What do you mean?"
+
+    a "Yeah, Vanessa heard it from her parents. I think it’s kind of dramatic, but his parents hired a detective, the one that’s coming tomorrow." 
+    a "The detective has to detain someone, his parents won’t accept the fact that there’s no evidence."
+
+    j "Alex, what if one of us gets detained?"
+
+    a "We’ll be fine, we have nothing to hid–"
+
+    j "Alex! You were with Vanessa, but I don’t have an alibi, they’re just going to detain me."
+
+    a "Jane, c’mon, it’ll be fin-"
+
+    j "No Alex! You don’t understand. You have wealthy parents. Most of this school has wealthy parents. They won’t get detained. But I’m an easy target. David hated me and..."
+
+    a "Janus! I’ll tell the detective we’ve been hanging out together. Okay? Then they’d have no reason to suspect you."
+
+    j "Promise?"
+
+    a "I promise."
+    hide Alex
+    "If I can just make it out unscathed for two more days. I can go home. Winter break starts this weekend. If I can get away for two more days. I can leave this place."
+    "I WON'T get arrested."
+
+    jump Himeko_dies_night_three
+
+label Himeko_lives_day_three:
+    scene Black_Screen
+
+    "School Announcement “Last night Himeko was found near the end of the woods injured. Due to Himeko’s injuries and David’s disappearance, there is now a curfew. All students are advised to stay indoors and MUST be in their dorm rooms by nighttime." 
+    "An official detective has been called and is expected to arrive by tomorrow. Every student will be sharply questioned regarding the disappearance of David and Himeko’s recent attack."
+
+    scene Rooftop 
+    show Alex at left
+    show Janus at right
+
+    a "Janus! There you are! Did you hear the news? Himeko is in the hospital. She was bleeding a lot when she was found. It sounds like she was attacked last night."
+
+    j "Does she remember what happened to her?"
+
+    "Janus could feel the pounding of his heart against his chest. He felt short of breath."
+
+    "Please, Himeko, please don’t remember anything, Janus prays."
+
+    a "Vanessa visited her earlier. She didn’t really say much."
+
+    j "I’ll visit her too! I need to see how she’s doing..."
+
+    a "Just be careful at night Jane. Any one of us could be next."
+
+    j "And what about you? I haven’t heard from you these past few nights. Hanging out with your new girlfriend?"
+
+    a "Yeah I’ve been– wait a minute are you jealous?"
+
+    j "It feels like you’ve forgotten about me since Vanessa confessed to you!"
+
+    a "Hey I’m allowed to have a relationship aren’t I? But I suppose now is not the time to be sneaking out to see her. She said she heard a rumor."
+
+    a "Apparently David’s parents are furious. They can’t accept the fact their little demon is gone. The school is going to find a scapegoat to detain."
+
+    "Janus feels the color leaving his face."
+
+    j "What do you mean?"
+
+    a "Yeah, Vanessa heard it from her parents. I think it’s kind of dramatic, but his parents hired a detective, the one that’s coming tomorrow." 
+    a "The detective has to detain someone, his parents won’t accept the fact that there’s no evidence right now."
+
+    j "Alex, what if one of us gets detained?"
+
+    a "We’ll be fine, we have nothing to hid–"
+
+    j "Alex! You’ve been with Vanessa, but I don’t have an alibi, they’re just going to detain me."
+
+    a "Jane, c’mon, it’ll be fin-"
+
+    j "No Alex! You don’t understand. You have wealthy parents. Most of this school has wealthy parents. They won’t get detained. But I’m an easy target. David hated me..."
+
+    a "Janus! I’ll tell the detective we’ve been hanging out together. Okay? Then they’d have no reason to suspect you."
+
+    j "Promise?"
+
+    a "I promise."
+    
+    "If I can just make it out unscathed for two more days. I can go home. Winter break starts this weekend. If I can get away for two more days. I can leave this place."
+    "I WON'T get arrested."
+
+    jump Himeko_visit
+
+label Himeko_dies_night_three:
+    
+
