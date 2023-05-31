@@ -83,7 +83,7 @@ image Grove:
     xzoom 3
 
 # The game starts here.
-
+#hello
 label start:
     # *Game starts off with Janus lying down under the shade of a tree as Alex joins him.*
     scene Street_Spring
@@ -138,7 +138,7 @@ label start:
     ma "I'm sure you've heard the news but we have a new student transferring into our class today."
     ma "Make sure you treat her nicely ok?"
     hide Adams
-    show Himeko with moveinleft 
+    show Himeko at left with moveinleft
     "As if on cue, Himeko enters the classroom, her luscious black hair being blown back from the light autumn wind."
     "The entire class stares at her in awe as she faces the class and starts to introduce herself."
     h "My English isn't the best. Nor are my conversational skills."
@@ -446,7 +446,7 @@ label start:
 
     "After class"
 
-    "The students get ready to leave homeroom before Mr. Adams stops them."
+    "The students get ready to leave homeroom before Mrs. Adams stops them."
 
     ma "Janus? Himeko? Can you please go to the principal’s office? You’ve been requested there."
 
