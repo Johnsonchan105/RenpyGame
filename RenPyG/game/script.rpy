@@ -18,6 +18,7 @@ define ja = Character("Jack")
 define s_a = Character("Student A")
 define s_b = Character("Student B")
 define u = Character("Unknown")
+define d = Character("Detective")
 
 image Janus:
     "janus_smile_one.png"
@@ -95,6 +96,10 @@ label start:
     j "Also, please stop calling me Jane. People are gonna get misunderstandings."
     a "Sorry, no can do. Blame yourself for keeping that mop of hair atop your head."
     a "Things almost as long as Himeko's hair for Christ's sake!"
+    a "Anyhow, summer break is coming in 5 days! You excited?"
+    j "Yea, to get away from you" 
+    a "Awww you dont mean that, you love me <3"
+    j "Whatever you say to delude yourself"
     hide Janus
     hide Alex
 
@@ -746,25 +751,51 @@ label start:
 
 menu choices:
     "Stop the First Aid":
-        jump ending1
+        jump Himeko_dies
     "Continue the First Aid":
-        jump ending2
+        jump Himeko_lives
 
-label ending1:
+label Himeko_dies:
     scene Grove
     show Jack at center
     ja "That’s it Jane. Let me handle it, as I’ve always have. I’ll make this world a better place for the both of us. Go and take a long nap…"
     scene Black_Screen with fade
-    "The end"
-    return
-label ending2:
+    "Janus wakes up back in his dorm, with a splitting headache."
+    scene Dorm_Night with fade
+    show Janus at center
+
+    j "Ugh... what happened?"
+
+    "Memories of Himeko’s screams, blood, and the cold, dark groves start piercing his head. "
+
+    "Janus jumps in front of his mirror. He notices his hair is caked with sweat and dirt, his shoes also stained with mud. His arms and legs feel sore, yet he doesn’t remember doing much physical activity…"
+
+    j "This can’t be – I was just in the woods with Himeko. How is it 3 AM right now?"
+
+    "Memories of David, Vanessa, and Himeko come flashing back. The final look of fear on David’s face ... "
+
+    j "He killed Them. Jack killed Them... No..."
+
+    j "I killed Them"
+
+    "Janus couldn't sleep that night. He laid wide awake in bed, curled up and shivering as he recalled repeatde the events of the night. Why is this all happening?"
+
+    jump Himeko_dies_day3
+
+label Himeko_lives:
     scene Grove
     show Janus at left
     show Himeko at center
     show Jack at right
     ja "So that’s your choice… Foolish and arrogant until the very end… At least that’s the first time you didn’t run away… Well done…"
     hide Jack with fade
-    show Police at right
+    "Some color returns to Himeko. Her breathing is now audible."
+    j "I have to get her to the nurse, quickly."
+
+    "Janus carries Himeko to the end of the forest. One of the teachers is probably doing their patrols. They’ll find Himeko and get her care.."
+    
+    jump Himeko_lives_day_three
+
     scene Black_Screen with fade
-    "The end"
-    return
+
+label Himeko_dies_day3:
