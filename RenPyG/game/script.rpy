@@ -906,11 +906,125 @@ label Himeko_lives_day_three:
 
     a "I promise."
     
+    hide Alex
+
     "If I can just make it out unscathed for two more days. I can go home. Winter break starts this weekend. If I can get away for two more days. I can leave this place."
     "I WON'T get arrested."
 
     jump Himeko_visit
 
 label Himeko_dies_night_three:
-    
+    scene Dorm_Night
+    show Janus at center
+    "Janus paces back and forth in his room."
+
+    j "I’m going to jail. They’re going to find out Jack, no I, killed them."
+
+    j "But Alex will defend me, it’ll be alright."
+
+    "Janus looks at the woods outside his window. Their bodies are there somewhere. I have to find it before the detective does."
+
+    "Janus covers himself in black and sneaks out of his window."
+
+    jump day_four
+
+label Himeko_visit:
+    scene hospital
+    show Janus at left
+    show Himeko at right
+    "Himeko lays in a hospital bed. Her hair is tangled, her face and lips are pale from the lost of blood."
+
+    h "Who’s…who’s there?"
+
+    j "Hey Himeko! It’s Janus."
+
+    j "I just wanted to check on you, after I heard about your injuries."
+
+    h "Janus..."
+
+    "A look of confusion, then fear falls on Himeko’s face."
+
+    "‘She must remember something,’ Janus thinks. ‘She’s instinctively scared of me’."
+
+    "Himeko sees the look of fear reflected on Janus’s face and composes herself."
+
+    h "Janus! Ah, thank you for visiting me. I’ve been having visitors all day. It’s been nice, people here are so caring."
+
+    "A sharp pain goes through Janus’s brain."
+
+    show Jack at center
+    ja "That smile is fake, Janus. She knows you know. She’s playing dumb. You have to eliminate her too! She’s going to rat you out the moment she can!"
+
+    j "Ah stop it! Go away!"
+
+    h "What…?"
+
+    j "Ah sorry, I just get these headaches sometimes."
+
+    hide Jack with fade
+
+    "Janus tries to have a friendly conversation with Himeko, but can’t help but feel underlying tension between them."
+
+    "No, If she remembered that I was the one who sent her here, she’d be screaming bloody murder. She doesn’t remember." 
+    "But even though she might not remember, she knows I’m suspicious. Who knows if or when she’ll get her memory back."
+
+    "Janus awkwardly bids farewell to Himeko and returns to his dorm"
+
+    jump Himeko_lives_night_three
+
+label Himeko_lives_night_three:
+    scene Dorm_Night
+    show Janus at center
+    "Janus tries to sleep that night, tossing and turning."
+
+    j "She’s going to out me out eventually…and then I’ll be locked up for the rest of my life."
+
+    j "No, I should just be happy she’s safe and recovering."
+
+    j "Ahh... Maybe I should just sleep this off."
+	
+    "..."
+
+    scene Hospital
+
+    show Janus at left
+    show Himeko at right
+
+    "Janus regains consciousness, realizing he’s no longer in his room – he’s in the nurse’s room with Himeko, his hand over the plug to her life support."
+
+    "Himeko looks so harmless, the moonlight shining on her face."
+
+    j "She’s harmless now, but she’ll be trouble once she recovers."
+
+    jump hospital_menu
+
+menu hospital_menu: 
+    "Maybe she truly forgot. I should let her recover.":
+        jump good_hospital
+    "I can’t take any chances. She has to go":
+        jump bad_hospital
+
+    jump day_four
+label good_hospital:
+    scene Hospital
+
+    show Janus at left
+    show Himeko at right
+    hide Janus with fade
+    "Janus leaves the nurse’s room and sneaks back into his own room. The worry that Himeko will remember consumes him."
+    jump day_four
+
+label bad_hospital:
+    scene Hospital
+
+    show Janus at left
+    show Himeko at right
+    "Janus feels Jack take over his body and he puts the pillow over her face..."
+    hide Janus with fade
+    show Jack with fade
+    "Small fragments of consciousness pass him – the sound of Himeko choking, her wide eyes in shock – before his memory blackens out."
+    jump day_four
+
+label day_four:
+
 
