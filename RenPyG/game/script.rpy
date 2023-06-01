@@ -759,12 +759,28 @@ label Himeko_dies:
     scene Grove
     show Jack at center
     ja "That’s it Jane. Let me handle it, as I’ve always have. I’ll make this world a better place for the both of us. Go and take a long nap…"
-    scene Black_Screen with fade
-    "Janus wakes up back in his dorm, with a splitting headache."
+    show Janus at left
+    j "No... No I won't let you make decisions anymore, I will decide what to do from now on."
+    ja "Sigh, do as you will, but dont come crying to me when things go wrong"
+    hide Jack with fade
+    jump choice1
+menu choice1:
+    "Hide the body":
+        jump hide_evidence
+    "Run back home":
+        jump dorm_arrest
+label hide_evidence:
+    scene Grove
+    show Jack at center
+
+    ja "So you couldn't live with the consequence of our actions and you come running back to me. No matter. I'll do as I always has, for the both of us."
+
+    "Jack stuffs several heavy stones into Himeko's pockets and deposits her body into the nearby pond."
+
+    ja "There we go. Nice and clean! Now run along back home Janus and always remember: I am always by your side."
+
     scene Dorm_Night with fade
     show Janus at center
-
-    j "Ugh... what happened?"
 
     "Memories of Himeko’s screams, blood, and the cold, dark groves start piercing his head. "
 
@@ -778,9 +794,35 @@ label Himeko_dies:
 
     j "I killed Them"
 
-    "Janus couldn't sleep that night. He laid wide awake in bed, curled up and shivering as he recalled repeatde the events of the night. Why is this all happening?"
+    "Janus couldn't sleep as he laid wide awake in bed, curled up and shivering as he recalled repeatde the events of the night. Why is this all happening?"
 
     jump Himeko_dies_day_three
+
+label dorm_arrest:
+    scene Dorm_Night with fade
+    show Janus at center
+
+    "Memories of Himeko’s screams, blood, and the cold, dark groves start piercing his head. "
+
+    "Janus jumps in front of his mirror. He notices his hair is caked with sweat and dirt, his shoes also stained with mud. His arms and legs feel sore, yet he doesn’t remember doing much physical activity…"
+
+    j "This can’t be – I was just in the woods with Himeko. How is it 3 AM right now?"
+
+    "Memories of David and Himeko come flashing back. The final look of fear on David’s face ... "
+
+    j "He killed Them. Jack killed Them... No..."
+
+    j "I killed Them"
+
+    "Janus couldn't sleep as he laid wide awake in bed, curled up and shivering as he recalled repeatde the events of the night. Why is this all happening?"
+
+    "Suddenly, the loud speaker blared from outside Janus's dorm door"
+
+    "STUDENT JANUS. EXIT YOUR DORM WITH YOUR HANDS UP..."
+
+    "Janus exits his dorm and was led to jail to await his trial."
+
+    jump jail_ending
 
 label Himeko_lives:
     scene Grove
@@ -1027,4 +1069,19 @@ label bad_hospital:
 
 label day_four:
 
+label jail_ending:
+    scene Jail
+    show Janus at center
 
+    j "When did things go so wrong? I just wanted to live a normal life..."
+    
+    "The presence of Jack lingers in the edge of Janus's conciousness, threatening to take over any second."
+
+    j "I won't let you. Not again, not ever for as long as I live."
+
+    "Jack's presence fades, but Janus knows with certainty that he will be back."
+
+    scene Black_Screen with fade
+
+    "The End"
+    return
