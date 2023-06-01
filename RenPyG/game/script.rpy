@@ -20,6 +20,16 @@ define s_b = Character("Student B")
 define u = Character("Unknown")
 define d = Character("Detective")
 
+default alive_H = True
+default alive_S = True
+default alive_Ma = True
+default alive_P = True
+default alive_V = True
+default alive_D = True
+default alive_Vf = True
+default alive_A = True
+#default
+
 image Janus:
     "janus_smile_one.png"
     zoom 0.5
@@ -784,11 +794,11 @@ label hide_evidence:
 
     "Memories of Himeko’s screams, blood, and the cold, dark groves start piercing his head. "
 
-    "Janus jumps in front of his mirror. He notices his hair is caked with sweat and dirt, his shoes also stained with mud. His arms and legs feel sore, yet he doesn’t remember doing much physical activity…"
+    "Janus jumps in front of his mirror. He notices his hair is caked with sweat and dirt, his shoes also stained with mud."
 
-    j "This can’t be – I was just in the woods with Himeko. How is it 3 AM right now?"
+    j "This can’t be – I was just in the woods. How is it 3 AM right now?"
 
-    "Memories of David and Himeko come flashing back. The final look of fear on David’s face ... "
+    "Memories of David and Himeko come flashing back. The final look of fear on their faces ... "
 
     j "He killed Them. Jack killed Them... No..."
 
@@ -829,7 +839,7 @@ label Himeko_lives:
     show Janus at left
     show Himeko at center
     show Jack at right
-    ja "So that’s your choice… Foolish and arrogant until the very end… At least that’s the first time you didn’t run away… Well done…"
+    ja "So that’s your choice... Foolish and arrogant until the very end... At least that’s the first time you didn’t run away."
     hide Jack with fade
     "Some color returns to Himeko. Her breathing is now audible."
     j "I have to get her to the nurse, quickly."
