@@ -823,7 +823,7 @@ label dorm_arrest:
 
     "Memories of Himeko’s screams, blood, and the cold, dark groves start piercing his head. "
 
-    "Janus jumps in front of his mirror. He notices his hair is caked with sweat and dirt, his shoes also stained with mud. His arms and legs feel sore, yet he doesn’t remember doing much physical activity…"
+    "Janus jumps in front of his mirror. He notices his hair is caked with sweat and dirt, his shoes also stained with mud. His arms and legs feel sore, yet he doesn’t remember doing much physical activity..."
 
     j "This can’t be – I was just in the woods with Himeko. How is it 3 AM right now?"
 
@@ -983,9 +983,13 @@ label Himeko_dies_night_three:
 
     j "But Alex will defend me, it’ll be alright."
 
-    "Janus looks at the woods outside his window. Their bodies are there somewhere. I have to find it before the detective does."
+    "Janus looks at the woods outside his window. Their bodies are there out there." 
+    
+    j "I have to find it before the detective does."
 
     "Janus covers himself in black and sneaks out of his window."
+
+    scene Black_Screen with fade
 
     jump day_four
 
@@ -1072,7 +1076,7 @@ label good_hospital:
     show Himeko at right
     hide Janus with fade
     "Janus leaves the nurse’s room and sneaks back into his own room. The worry that Himeko will remember consumes him."
-    jump day_four
+    jump day_four_good
 
 label bad_hospital:
     scene Hospital
@@ -1086,6 +1090,63 @@ label bad_hospital:
     jump day_four
 
 label day_four:
+    scene Dorm_Day
+    show Janus at left
+    "Janus is huddled in a corner as he stares at his trembling fingertips, overcome with grief and guilt as his eyes and lungs burn from the anguish he is feeling."
+    show Jack at right
+    ja "Excellent Janus..."
+    ja "With this we have secured our livelihood and future..."
+    j "No..."
+    ja "There's no use in crying over spilt milk. What's important is that we are safe."
+    j "I... I don't want to be safe if this is what I need to do..."
+    ja "Are you stupid? Why not work towards a better outcome for yourself? David is gone and we're safe, so what's the problem?"
+    j "I know..."
+
+    jump choice
+menu choice
+    "I just can't accept this outcome...":
+        jump pre_jail_scene
+    "It just all hurts so much...":
+        jump take_over
+    "I'm just potecting myself...":
+        jump evil_path
+
+label take_over
+    scene Dorm_Day
+    hide Janus with fade
+    show Jack at center
+    ja "That's right Janus... Just leave everything to me... I'll make sure the world is a better place for the both of us..."
+    ja "Why don't you take a long nap and let me take care of it all..."
+   
+    scene Black_Screen with fade
+
+
+    "The End"
+    return
+label day_four_good:
+    ja "Are you an idiot? You just jeopardized both our futures! Why couldn't you just get rid of her?"
+    j "Shut it, Jack. I've already decided. There's already too much blood on our hands. I refuse to dirty them anymore."
+    ja "You...!"
+    ja "I hope your decision was the right one. You're not the only one at risk here."
+    j "I know, but I don't care. I refuse to live with all this guilt. I can't undo the things that've happened, but I want to try to make things right."
+    ja "You and your stupid sense of justice... You better pray that it all pays out for you in the end."
+    j "That doesn't matter. What matters is that I try."
+    ja "Whatever you say... I'll make sure to clean up after you like always."
+    "Jack stops talking, leaving Janus alone with his thoughts, thoughts of worry but also pride in knowing that Himeko is alive."
+
+label pre_jail_scene
+    scene Dorm_Day
+    show Jack at right
+    show Janus at left
+    j "I'm tired of being trampled over. To be forced to be witness. That's why I'm going to make things right."
+    j "I'm turning myself in. You can't stop me Jack. I've made up my mind."
+    ja "You! You would trample over everything we've been through just to satisfy your stupid sense of justice!?"
+    j "Yes. I refuse to live a life in which I can't even be proud of myself. Goodbye Jack."
+    ja "....."
+    ja "If that's what you've decided, I can't change our fate."
+    ja "I still think you're too stupid, simple, and naive for this cruel world, but feel free to prove me wrong."
+    hide Jack with fade
+    jump jail_ending
 
 label jail_ending:
     scene Jail
