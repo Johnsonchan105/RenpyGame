@@ -1042,7 +1042,7 @@ label Himeko_lives_night_three:
     show Janus at center
     "Janus tries to sleep that night, tossing and turning."
 
-    j "She’s going to out me out eventually…and then I’ll be locked up for the rest of my life."
+    j "She’s going to out me out eventually... and then I’ll be locked up for the rest of my life."
 
     j "No, I should just be happy she’s safe and recovering."
 
@@ -1055,7 +1055,7 @@ label Himeko_lives_night_three:
     show Janus at left
     show Himeko at right
 
-    "Janus regains consciousness, realizing he’s no longer in his room – he’s in the nurse’s room with Himeko, his hand over the plug to her life support."
+    "Janus regains consciousness, realizing he’s no longer in his room – he’s in the nurse’s room with Himeko, his hands held a pillow over her face."
 
     "Himeko looks so harmless, the moonlight shining on her face."
 
@@ -1086,7 +1086,7 @@ label bad_hospital:
     "Janus feels Jack take over his body and he puts the pillow over her face..."
     hide Janus with fade
     show Jack with fade
-    "Small fragments of consciousness pass him – the sound of Himeko choking, her wide eyes in shock – before his memory blackens out."
+    "Small fragments of consciousness pass him - the sound of Himeko choking, her wide eyes in shock - before his memory blackens out."
     jump day_four
 
 label day_four:
@@ -1110,6 +1110,8 @@ menu choice
         jump take_over
     "I'm just potecting myself...":
         jump evil_path
+#TODO
+label evil_path:
 
 label take_over
     scene Dorm_Day
@@ -1120,10 +1122,13 @@ label take_over
    
     scene Black_Screen with fade
 
-
     "The End"
     return
+#TODO
 label day_four_good:
+    scene Dorm_Day
+    show Janus at right
+    show Jack at left
     ja "Are you an idiot? You just jeopardized both our futures! Why couldn't you just get rid of her?"
     j "Shut it, Jack. I've already decided. There's already too much blood on our hands. I refuse to dirty them anymore."
     ja "You...!"
@@ -1133,6 +1138,167 @@ label day_four_good:
     j "That doesn't matter. What matters is that I try."
     ja "Whatever you say... I'll make sure to clean up after you like always."
     "Jack stops talking, leaving Janus alone with his thoughts, thoughts of worry but also pride in knowing that Himeko is alive."
+    ja "They’re looking for someone to blame, remember?."
+
+    j "It’ll probably be me anyway..."
+
+    "Then, Janus feels a jolting headache. He starts breaking out into sweat."
+
+    ja "Are you stupid? FRAME someone. Deflect. I worked too hard to be locked up."
+
+    j "Stop! I don't need your help! I had to clean up your mess!"
+
+    ja "Everything I’ve done is to keep us safe! You should be grateful. Now all you have to do is not get thrown in jail.."
+
+    j "It’s all because of you!"
+
+    ja "I SAVED YOU! Now you just need to find someone else to blame. It’s only a temporary solution. They won't be there forever."
+
+    "Student Janus, come to the principal's office immediately."
+
+    ja "Well lets see how you get out of this one."
+    
+    j "I'll do it without your help"
+
+    scene Principle_Office
+    show Janus at left
+    show Detective at center #TODO
+    show Principal at right
+
+    i "Hello Mr. Janus. I am Detective Thomas. As you have probably heard by now, some of your classmates have recently disappeared."
+
+    i "This is just a formal investigation. I am not accusing anyone of anything, I am just gathering information about what has been going on recently." 
+
+    i "Please help me figure out what happened to your classmates and be as accurate and detailed as possible. I want to know what you were doing the night before yesterday?"
+
+    "‘This is not just an investigation,’ Janus thinks. ‘He’s going to detain someone by the end of the night.’" 
+
+    jump investigate_menu
+
+menu investigate_menu:
+    "Lie to the detective":
+        jump lie
+    "Tell the truth":
+        jump truth
+label lie:
+    scene Principle_Office
+    show Janus at left
+    show Detective at center #TODO
+    show Principal at right
+    j "I was with Alex that night. He’s my best friend."
+
+    i "I see. And have you noticed any tensions between Himeko and David and your other classmates?"
+
+    j "Yeah. Sam is one of David’s cronies–I mean friends. They didn’t look too happy with each other the last time I saw them."	
+
+    "The detective writes in his notepad."
+
+    "It was a long interview, with Janus telling little white lies here and there. What looked like Sam’s annoyance was exaggerated into a possible cause of David’s disappearance."
+
+    i "Thank you for taking the time out of the day for this interview. I understand that you may have concerns about the recent events and I assure you I will find the culprit."
+
+    j "Thank you detective."
+
+    p "Janus you are now dismissed."
+
+    jump day_four_night
+
+label truth:
+    scene Principle_Office
+    show Janus at left
+    show Detective at center #TODO
+    show Principal at right
+    "Janus tells the detective the truth. About his alter ego, about what happened to Himeko and David."
+		
+    "Janus feels a migraine splitting his head once more."
+
+    ja "How can you be so foolish! You’ve thrown away all our hard work. All the work I’ve done to keep us safe."
+
+    j "I can’t keep living like this. I just can’t live with this guilt. I’m not going to let you hurt more people."
+
+    i "Janus, you are under arrest for causing the disappearence and assulting fellow students."
+
+    jump jail_ending
+
+label day_four_night:
+    scene Dorm_Night
+    show Janus at left
+
+    j "That was stressful, but I got out of it fine."
+
+    show Jack at right
+    ja "This is temporary, we must silence others in order to protect us."
+
+    j "No. Lets rest, we need rest in order to make it through to the break."
+
+    "Knocks comes from the door"
+
+    hide Jack with fade
+    
+    "Janus walks to the door and opens it, revealing Alex standing in the doorway."
+    show Alex at right
+
+    a "Hey Jane, you doing alright? You don't look so good."
+
+    j "Yea... yea. It's been a long day man."
+
+    a "Yea I hear ya, did you get called in to be questioned today?"
+
+    j "I did, what about you?"
+
+    a "I also got questioned today and MAN was it stressful."
+
+    j "It sure was, say, do you know where Sam is gonna be tomorrow?"
+
+    a "Uhhh I think he's going to be in the forest with Gwen tomorrow, why?"
+
+    j "Nothing... just wondering"
+
+    a "Well okay, I better be going, Vanessa just texted."
+
+    j "Sounds good! I'll see you tmrw."
+
+    hide Alex with fade
+
+    show Jack at right
+
+    ja "Janus, it our perfect chance, we can frame Sam! That'll get them off our backs."
+
+    j "I don't know if I want to..."
+
+    ja "CHOOSE OR PERISH"
+
+    jump day_4_choice
+
+menu day_4_choice:
+    "Refuse":
+        jump day_5_jail
+    "Take action":
+        jump take_action
+label take_action:
+
+menu murder:
+
+label day_5_jail:
+    scene Dorm_Night
+    show Janus at left
+    show Jack at right
+
+    j "No I'm not gonna do anything, you've already done enough damage."
+    
+    ja "You idiot, deal with this yourself then."
+
+    hide Jack with fade
+
+    j "Sigh, lets head to sleep."
+
+    scene Black_Screen with fade
+    hide Janus with fade
+    "..."
+
+    scene Dorm_Day with fade
+    show Janus at left
+    
 
 label pre_jail_scene
     scene Dorm_Day
@@ -1157,6 +1323,8 @@ label jail_ending:
     "The presence of Jack lingers in the edge of Janus's conciousness, threatening to take over any second."
 
     j "I won't let you. Not again, not ever for as long as I live."
+
+    ja "Remember that I am you, and you are me. We will always be together for as long as we live."
 
     "Jack's presence fades, but Janus knows with certainty that he will be back."
 
