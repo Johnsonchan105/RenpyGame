@@ -1220,6 +1220,62 @@ label truth:
 
     jump jail_ending
 
+label day_four_night:
+    scene Dorm_Night
+    show Janus at left
+
+    j "That was stressful, but I got out of it fine."
+
+    show Jack at right
+    ja "This is temporary, we must silence others in order to protect us."
+
+    j "No. Lets rest, we need rest in order to make it through to the break."
+
+    "Knocks comes from the door"
+
+    hide Jack with fade
+    
+    "Janus walks to the door and opens it, revealing Alex standing in the doorway."
+    show Alex at right
+
+    a "Hey Jane, you doing alright? You don't look so good."
+
+    j "Yea... yea. It's been a long day man."
+
+    a "Yea I hear ya, did you get called in to be questioned today?"
+
+    j "I did, what about you?"
+
+    a "I also got questioned today and MAN was it stressful."
+
+    j "It sure was, say, do you know where Sam is gonna be tomorrow?"
+
+    a "Uhhh I think he's going to be in the forest with Gwen tomorrow, why?"
+
+    j "Nothing... just wondering"
+
+    a "Well okay, I better be going, Vanessa just texted."
+
+    j "Sounds good! I'll see you tmrw."
+
+    hide Alex with fade
+
+    show Jack at right
+
+    ja "Janus, it our perfect chance, we can frame Sam! That'll get them off our backs."
+
+    j "I don't know if I want to..."
+
+    ja "CHOOSE OR PERISH"
+
+    jump day_4_choice
+
+menu day_4_choice:
+    "Don't do anything":
+        
+    "Take action":
+        jump murder
+menu murder:
 
 
 label pre_jail_scene
