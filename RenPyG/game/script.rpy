@@ -1271,12 +1271,34 @@ label day_four_night:
     jump day_4_choice
 
 menu day_4_choice:
-    "Don't do anything":
-        
+    "Refuse":
+        jump day_5_jail
     "Take action":
-        jump murder
+        jump take_action
+label take_action:
+
 menu murder:
 
+label day_5_jail:
+    scene Dorm_Night
+    show Janus at left
+    show Jack at right
+
+    j "No I'm not gonna do anything, you've already done enough damage."
+    
+    ja "You idiot, deal with this yourself then."
+
+    hide Jack with fade
+
+    j "Sigh, lets head to sleep."
+
+    scene Black_Screen with fade
+    hide Janus with fade
+    "..."
+
+    scene Dorm_Day with fade
+    show Janus at left
+    
 
 label pre_jail_scene
     scene Dorm_Day
