@@ -1074,8 +1074,8 @@ label good_hospital:
 
     show Janus at left
     show Himeko at right
-    hide Janus with fade
     "Janus leaves the nurse’s room and sneaks back into his own room. The worry that Himeko will remember consumes him."
+    hide Janus with fade
     jump day_four_good
 
 label bad_hospital:
@@ -1108,10 +1108,13 @@ menu choice
         jump pre_jail_scene
     "It just all hurts so much...":
         jump take_over
+
+'''
     "I'm just potecting myself...":
         jump evil_path
 #TODO
 label evil_path:
+'''
 
 label take_over
     scene Dorm_Day
@@ -1124,7 +1127,7 @@ label take_over
 
     "The End"
     return
-#TODO
+
 label day_four_good:
     scene Dorm_Day
     show Janus at right
@@ -1180,6 +1183,7 @@ menu investigate_menu:
         jump lie
     "Tell the truth":
         jump truth
+
 label lie:
     scene Principle_Office
     show Janus at left
@@ -1217,6 +1221,8 @@ label truth:
     j "I can’t keep living like this. I just can’t live with this guilt. I’m not going to let you hurt more people."
 
     i "Janus, you are under arrest for causing the disappearence and assulting fellow students."
+
+    i "You have the right to remain silent. Anything you say can and will be used against you in a court of law. You have the right to an attorney. If you cannot afford a lawyer, one will be provided for you."
 
     jump jail_ending
 
@@ -1258,11 +1264,27 @@ label day_four_night:
 
     j "Sounds good! I'll see you tmrw."
 
+    a "Wait! Before I go, how is Himeko, you visited her right?"
+
+    "A tinge of guilt sprang through Janus"
+
+    j "Yea... she's alright, although last I heard she doesn't remember anything of the night."
+
+    a "I'm glad shes better now. I really hope they caught whoever that attacked her."
+
+    "The feeling of guilt increased within Janus"
+
+    j "I hope they do too."
+
+    a "Alright man, I really gotta run. I'll see ya tomorrow! Keep yourself safe."
+
+    j "Will do. See ya.+"
+
     hide Alex with fade
 
     show Jack at right
 
-    ja "Janus, it our perfect chance, we can frame Sam! That'll get them off our backs."
+    ja "Janus, it our perfect chance!"
 
     j "I don't know if I want to..."
 
@@ -1276,15 +1298,181 @@ menu day_4_choice:
     "Take action":
         jump take_action
 label take_action:
+    scene Dorm_Night
+    show Janus at left
+    show Jack at right
 
+    j "ALRIGHT ALRIGHT I GET IT. Fine. Lets do it."
+
+    ja "Finally you're taking steps to protect yourself. Now I don't have the be the one to step in."
+
+    j "What should I do???"
+
+    ja "Murder someone you simpleton! How DENSE are you?"
+
+    j "But who..."
+
+    jump murder_H
+
+menu murder_H:
+    "Himeko":
+        jump H_murder
+    "Sam":
+        jump S_murder
+    "Vanessa":
+        jump V_murder
+    "Alex":
+        jump A_murder
+    "Gwen":
+        jump G_murder
+    "No one":
+        jump No_murder
 menu murder:
+    "Sam":
+        jump S_murder
+    "Vanessa":
+        jump V_murder
+    "Alex":
+        jump A_murder
+    "Gwen":
+        jump G_murder
+    "No one":
+        jump No_murder
+label No_murder:
+    scene Dorm_Night
+    show Janus at left
+    show Jack at right
+
+    j "No, I'm not going to do it. You've done enough already."
+
+    ja "Don't you get it? Its the perfect-"
+
+    j "No means no, now leave."
+
+    ja "Fine, if you don't do anything, I will."
+
+    j "What??? NO!"
+
+    jump fight
+
+label A_murder:
+    scene Dorm_Night
+    show Janus at left
+    show Jack at right
+
+    ja "Alex is the right choice. He knows us too wel. He needs to go."
+
+    j "WHAT? NO??? WHAT ARE YOU SAYING?"
+
+    ja "You know I'm right."
+
+    j "You know what, this has gone too far. I'm going to turn myself in."
+
+    ja "Fine, I'll do it myself."
+
+    j "NO!"
+
+    jump fight
+
+label V_murder:
+    scene Dorm_Night
+    show Janus at left
+    show Jack at right
+
+    ja "Vanessa is the right choice. Remember how she said she was only with Alex for his money? She needs to go."
+
+    j "But Alex loves..."
+
+    ja "Do you want to see your friend suffer??? One way or another its not going to end well."
+
+    j "..."
+
+    j "I'm sorry Alex."
+
+    scene Black_Screen with fade
+
+    "..."
+    jump arrest
+
+label S_murder:
+    scene Dorm_Night
+    show Janus at left
+    show Jack at right
+
+    ja "Sam is the right choice. He bullied you alongsides David, do not let him go free for what he did to you."
+
+    j "...."
+
+    j "Fine."
+
+    scene Black_Screen with fade
+
+    "..."
+    jump arrest
+
+label arrest:
+    scene Dorm_Day
+    show Janus at left
+
+    "Janus woke up to the sound of banging on his dorm door."
+
+    "STUDENT JANUS. YOU ARE UNDER ARREST FOR THE SUSPISION OF ASSULT AND HOMICIDE. EXIT YOUR DORM WITH YOUR HANDS UP."
+
+    "Janus exits the dorm and was led to jail to await for his trial"
+    jump jail_ending
+
+
+
+label G_murder:
+    scene Dorm_Night
+    show Janus at left
+    show Jack at right
+
+    ja "Gwen is the right choice. Since Sam is going with her to the forest tomorrow, this is the perfect opportunity to frame him."
+
+    j "...."
+
+    j "Fine."
+
+    scene Black_Screen with fade
+
+    "..."
+
+    jump day_5_ending
+
+label H_murder:
+    scene Dorm_Night
+    show Janus at left
+    show Jack at right
+
+    ja "Himeko is the right choice, who knows what she'll tell."
+
+    "Hands shaking, Janus recalls the sensations that night in the forest as Himeko gasped for air."
+
+    j "No."
+
+    ja "What?"
+
+    j "I won't do it, I'm going to turn myself in tomorrow. This can't go on, I can't hurt anyone else."
+
+    ja "Fine, I'll do it myself."
+
+    j "NO."
+
+    jump fight
+
+menu fight:
+    "Resist Jack":
+        jump day_5_jail
+    "Let go":
+        jump take_over
 
 label day_5_jail:
     scene Dorm_Night
     show Janus at left
     show Jack at right
 
-    j "No I'm not gonna do anything, you've already done enough damage."
+    j "No I'm not gonna do anything, you've already done enough damage. I'm turning myself in."
     
     ja "You idiot, deal with this yourself then."
 
@@ -1296,9 +1484,69 @@ label day_5_jail:
     hide Janus with fade
     "..."
 
-    scene Dorm_Day with fade
+    jump truth
+
+label day_5_ending:
+    scene Hallway
     show Janus at left
-    
+    "There are a lot of hushed whispers during the day. Janus walks around, trying to hear the gossip."
+    show Vanessa at right
+
+    vf "They locked up Sam! Apparently the detective thought he was the most suspicious."
+
+    v "Sam huh? I’d always thought it would be Janus. Who knows what he’s thinking with that creepy demeanor of his."
+	
+    hide Vanessa with fade
+
+    "Janus starts breaking into sweat."
+
+    j "Sam is locked up because of me..."
+	
+    "Janus and Alex meet up to say their goodbyes before winter break."
+    show Alex at right
+
+    j "I’ll miss you man. Thank you for being my one true friend here."
+
+    a "Jane, you don’t always have to be so formal with me. It’s not like I’ll never see you again. Unless you also get taken out by the killer. "
+
+    "A pang of guilt shocks Janus."
+
+    a "Ah... bad timing. Sorry."
+
+    j "No, you’re all good."
+
+    jump safe_end
+
+label safe_end:
+    scene Dorm_Night
+
+    j "I can’t believe it, I got away. I get to go away from this place, but Sam’s still there."
+
+    ja "See, aren’t you glad? I got rid of the school bully, got his crony locked up in jail."
+
+    j "No, this isn’t right...I...we hurt innocent people."
+
+    ja "And It’s your right! The school would have never done anything to David had we not taken action."
+
+    j "I never asked for your help! Things would have been better off without you."
+
+    ja "You did ask for my help! I’ve been with you all along, eliminating people, framing Sam."
+
+    j "There could have been another way!"
+
+    ja "Really? Remember all those times you tried to report David? All the times the teachers wouldn’t risk their jobs to get David in trouble?" 
+    ja "If the school won’t seek justice, it’s only right that we do."
+
+    j "It doesn't change the fact that we hurt them."
+
+    ja "It was all for you and only you. Now just sit tight and get out."
+
+    "Janus clutched at his head, and falling onto the floor."
+
+    scene Black_Screen with fade
+
+    "The end"
+    return
 
 label pre_jail_scene
     scene Dorm_Day
@@ -1310,7 +1558,7 @@ label pre_jail_scene
     j "Yes. I refuse to live a life in which I can't even be proud of myself. Goodbye Jack."
     ja "....."
     ja "If that's what you've decided, I can't change our fate."
-    ja "I still think you're too stupid, simple, and naive for this cruel world, but feel free to prove me wrong."
+    ja "I still think you're too stupid, simple, and naive."
     hide Jack with fade
     jump jail_ending
 
