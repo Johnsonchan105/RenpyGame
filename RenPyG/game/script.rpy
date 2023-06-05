@@ -204,7 +204,7 @@ image Jack_Smirk:
     "jack_smirk.png"
     zoom 0.6
 image Jack_Suprised:
-    "jack_suprised.png"
+    "jack_surprised.png"
     zoom 0.6
 image Jack_Smile:
     "jack_smile_one.png"
@@ -1822,7 +1822,7 @@ label pre_jail_scene:
     ja "If that's what you've decided, I can't change our fate."
     ja "I still think you're too stupid, simple, and naive."
     hide Jack with fade
-    jump jail_ending
+    jump truth
 
 label jail_ending:
     scene Prison
