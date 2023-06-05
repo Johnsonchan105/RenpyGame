@@ -37,7 +37,7 @@ image Janus_Smirk:
     "janus_smirk.png"
     zoom 0.6
 image Janus_Suprised:
-    "janus_suprised.png"
+    "janus_surprised.png"
     zoom 0.6
 image Janus_Smile:
     "janus_smile_one.png"
@@ -66,6 +66,9 @@ image Himeko_Laugh:
 image Himeko_Sad:
     "himeko_sad.png"
     zoom 0.6
+image Himeko_Sleepy:
+    "himeko_sleepy.png"
+    zoom 0.6   
 image Himeko_Shocked:
     "himeko_shocked.png"
     zoom 0.6
@@ -80,31 +83,31 @@ image Himeko_Smile_Closed_Eyes:
     zoom 0.6
 image Alex:
     "alex_normal.png"
-    zoom 0.45
+    zoom 0.6
 image Alex_Angry_Talking:
     "alex_angry_two.png"
-    zoom 0.45
+    zoom 0.6
 image Alex_Angry:
     "alex_angry_one.png"
-    zoom 0.45
+    zoom 0.6
 image Alex_Laugh:
     "alex_laugh.png"
-    zoom 0.45
+    zoom 0.6
 image Alex_Sad:
     "alex_sad.png"
-    zoom 0.45
+    zoom 0.6
 image Alex_Smile_Teeth:
     "alex_smile_three.png"
-    zoom 0.45
+    zoom 0.6
 image Alex_Smile_Closed_Eyes:
     "alex_smile_two.png"
-    zoom 0.45
+    zoom 0.6
 image Alex_Smirk:
     "alex_smirk.png"
-    zoom 0.45
+    zoom 0.6
 image Alex_Suprised:
-    "alex_suprised.png"
-    zoom 0.45
+    "alex_surprised.png"
+    zoom 0.6
 image David:
     "david_smile_one.png"
     zoom 0.6
@@ -269,8 +272,9 @@ label day_one_daytime:
     scene Street_Spring
     with dissolve
     show Janus at right
-    show Alex at left
+    show Alex_Smile_Teeth at left
     a "Hey Jane! Whatcha doing all the way out here for? It's always a pain in the ass to find you ya know?"
+    show Janus_Smile at right
     j "Ah, sorry about that. Homeroom was a bit noisy today and the weather outside looked really pleasant so I couldn’t help myself."
     j "Also, please stop calling me Jane. People are gonna get misunderstandings."
     a "Sorry, no can do. Blame yourself for keeping that mop of hair atop your head."
@@ -292,8 +296,8 @@ label day_one_daytime:
     # *back to the conversation*
     scene Street_Spring
     with dissolve
-    show Janus at right
-    show Alex at left
+    show Janus_Smile at right
+    show Alex_Smile_Teeth at left
     j "Haha… I guess I can't argue with you there… Speaking of, she's transferring into our classes today isn't she?"
     a "That's right! I heard that her parents are super rich, but that's besides that point."
     j "Anyways, did something happen? It's not too often you come seek me out like this."
@@ -322,7 +326,7 @@ label day_one_daytime:
     ma "I'm sure you've heard the news but we have a new student transferring into our class today."
     ma "Make sure you treat her nicely ok?"
     hide Adams
-    show Himeko at left with moveinleft
+    show Himeko_Smile_Closed_Eyes at left with moveinleft
     "As if on cue, Himeko enters the classroom, her luscious black hair being blown back from the light autumn wind."
     "The entire class stares at her in awe as she faces the class and starts to introduce herself."
     h "My English isn't the best. Nor are my conversational skills."
@@ -333,7 +337,7 @@ label day_one_daytime:
     ma "She's new here and will greatly appreciate any help she can get."
     h "Thank you teacher."
     ma "Well then, here's your…"
-    hide Himeko
+    hide Himeko_Smile_Closed_Eyes
     hide Adams
 
     show Janus
@@ -360,14 +364,18 @@ label day_one_daytime:
     show Janus at left
     j "Hmm? What's going-"
     j "Ah-"
+    hide Janus
+    show Janus_Smile at left
     "Janus quickly regains his bearings and whispers a quick gesture of thanks to his savior."
+    hide Himeko
+    show Himeko_Smug at right
     j "Thank you. The weather has been too pleasant recently so I couldn't help myself… Aha…"
     h "Don't mention it. I won't wake you up next time."
     j "Noted."
     
-    hide Himeko
+    hide Himeko_Smug
     j "(So much for first impressions… Why did the weather have to be so nice today? Oh well. At least I’ll have plenty of time later today to appreciate it.)"
-    hide Janus
+    hide Janus_Smile
 
     "After class"
 
@@ -388,7 +396,7 @@ label day_one_daytime:
     
     "The students congregate around Himeko's desk, eager to ask her questions like “How does your daily hair routine look like?” or “Are you currently seeing someone?” before a loud voice silences them."
     
-    show Vanessa at center
+    show Vanessa_Angry at center
     v "Hey! One at a time! You'll overwhelm the poor girl."
 
     scene Rooftop
@@ -427,12 +435,16 @@ label day_one_daytime:
 
     "Janus is still immersed in his work when he suddenly hears a familiar voice call out to him."
     
-    show Alex at left
+    show Alex_Smile_Teeth at left
     a "Hey Jane!"
 
     "Janus silently palms his forehead before forcing a smile and looking at his friend."
     
     j "Hello Alex. What may I get you today?"
+    
+    hide Alex_Smile_Teeth
+
+    show Alex at left
 
     a "Dude, you don’t have to be so formal you know? I’m your friend."
 
@@ -444,6 +456,9 @@ label day_one_daytime:
 
     "As Janus prepares a sub for his friend, he is suddenly interrupted by Alex"
 
+    hide Alex
+    show Alex_Sad at left
+
     a "Uhhh… Actually, hold that thought. I see David and his cronies. I better get going-"
 
     j "Ahhh, gotcha. Later then?"
@@ -452,11 +467,11 @@ label day_one_daytime:
 
     "Alex quickly evacuates himself from the cafeteria just as a group of imposing figures enter, the lively atmosphere visibly dampening upon their arrival."
 
-    hide Alex with fade
+    hide Alex_Sad with fade
 
-    show Janus at right
-    show David at center
-    show Sam at left
+    show Janus at right with moveinright
+    show David_Smirk at center
+    show Sam_Smirk at left
 
     "The head of the group approaches Janus, towering over him as he grumbles something under his breath."
 
@@ -470,7 +485,15 @@ label day_one_daytime:
 
     d "Come on, let’s get going."
 
+    hide Sam_Smirk
+
+    show Sam_Sad at left
+
     s "Are you sure David? We’re pretty tired and hungry-"
+
+    hide David_Smirk
+
+    show David_Angry 
 
     d "Shut it. I don’t need to remind you of your position do I?"
 
@@ -480,8 +503,8 @@ label day_one_daytime:
 
     "The group promptly leaves the cafeteria, the resulting atmosphere becoming quite awkward before its former liveliness picks up again."
     
-    hide David
-    hide Sam
+    hide David_Angry
+    hide Sam_Sad
 
     "Janus releases a breath he was holding before muttering to himself."
 
@@ -498,9 +521,10 @@ label day_one_daytime:
     scene Rooftop
     "Janus makes his way to the school rooftop, only to see Alex crouched by the corner."
     show Janus at right
-    show Alex at left
+    show Alex_Sad at left
     "Janus rushes over to his friend only to see various bruises on him, clearly a sign of a scuffle."
-    show Janus at center
+    hide Janus
+    show Janus_Suprised at center with moveinright
 
     j "Alex! Are you ok? What happened?"
 
@@ -510,9 +534,13 @@ label day_one_daytime:
 
     j "Sorry. Just what the hell happened to you?"
 
+    hide Janus_Suprised
+    show Janus
+
     "Janus starts tending to his friend’s wounds as Alex starts recounting today’s events."
 
-    a "It’s a bit of a long story, but basically, you know Vanessa? That one popular girl? Well we’ve actually known each other for a while, and she tried asking me out today. Unfortunately, David had her eye on her, and, well, you can probably figure out the rest. Also, why the hell do you have all these medical supplies on you-"
+    a "It’s a bit of a long story, but basically, you know Vanessa? That one popular girl? Well we’ve actually known each other for a while, and she tried asking me out today."
+    a "Unfortunately, David had her eye on her, and, well, you can probably figure out the rest. Also, why the hell do you have all these medical supplies on you-"
 
     a "OUCH! That hurt dammit!"
 
@@ -547,9 +575,8 @@ label day_one_daytime:
     j "(If only something could be done about it, huh? Haa… If only miracles came true more often)."
 
     "Janus then falls into a deep slumber as he thinks of the upcoming day."
-    
+    scene Black_Screen with fade
     hide Janus with fade
-
     "....."
     "....."
     menu:
@@ -558,7 +585,7 @@ label day_one_daytime:
 
 label day_two_daytime:
     scene Dorm_Day
-    show Janus with zoomin
+    show Janus_Suprised with zoomin
     "Janus jolts awake, drenched in sweat and his entire nervous system ablaze as he tries to calm his breathing and nerves."
 
     j "(Haa… Haa… It was just a nightmare. It’s been a while since I’ve dreamt, especially one that bad.)"
@@ -568,12 +595,13 @@ label day_two_daytime:
     scene Hallway
     show Janus at right
     "The school was abuzz as Janus arrived on campus, students moving to and fro as commotion filled the halls."
-    show Alex at left
+    show Alex_Laugh at left
     a "Yo Jane! Good to see you’re doing alright! Pretty sure the commotion’s getting to you, huh?"
 
     j "Yeah… Good to see you’re still alive Alex! Did something happen? It’s way too noisy…"
 
-    a "Oh yeah, I forget you’re pretty busy all the time so you must’ve not heard. Anyways, I don’t know the full details, but apparently David’s not here so his dad’s been pretty frantic. The school seems to be pretty happy though, with The Dark Lord all gone and stuff for now."
+    a "Oh yeah, I forget you’re pretty busy all the time so you must’ve not heard. Anyways, I don’t know the full details, but apparently David’s not here so his dad’s been pretty frantic."
+    a "The school seems to be pretty happy though, with The Dark Lord all gone and stuff for now."
 
     j "Ohhh, so that's what happened… No wonder why I’ve been seeing so many smiles lately."
 
@@ -586,8 +614,8 @@ label day_two_daytime:
     "Alex gently shoves his friend towards the rooftop, away from the crowd."
 
     scene Rooftop
-    show Janus at right
-    show Alex at left
+    show Janus_Smile at right
+    show Alex_Laugh at left
 
     "Alex hands Janus a warm and delicious smelling package, shortly after Janus’ stomach growls."
 
@@ -605,8 +633,8 @@ label day_two_daytime:
 
     scene Classroom_Day
 
-    show Janus at right
-    show Himeko at left
+    show Janus_Smile at right
+    show Himeko_Smile_Closed_Eyes at left
 
     h "You look like you’ve seen better days."
 
@@ -676,16 +704,19 @@ label day_two_daytime:
 
     v "Always so formal aren’t you? Anyways, I’d like a strawberry parfait, while my friends here would like…"
 
-    "Janus gets their food ready as they sit down, the boy overhearing some gossip as he gets their food ready."
-
+    "Janus gets their food ready as they sit down, Janus overhearing some gossip as he gets their food ready."
+    hide Vanessa
+    show Vanessa_Smug at left
     vf "So, are you actually interested in him, Vanessa"
 
     v "I mean, a little I guess? His family’s quite rich though."
 
     vf "WOW. You sure are heartless sometimes aren’t you? I never would have suspected it."
-
+    hide Vanessa_Smug
+    show Vanessa at left
     "The group quiets down as Janus gives them their orders, before leaving with a polite smile."
-
+    hide Vanessa
+    show Vanessa_Smug at left
     vf "Aren’t you worried about his friend? They say he’s cursed. People around him go missing like his parents, you know?"
 
     v "And you believe that? I may be many things but I’m not superstitious you know… Besides, he’s a pretty easy guy to fool. Man barely has a life outside his work and studies."
@@ -708,7 +739,14 @@ label day_two_daytime:
     j "(I hope Alex can see through her facade tomorrow… Then again, he’s not the brightest bulb there is…)"
 
     "Janus audibly groans in frustration before deciding to call it a day, burying himself under the covers and hoping things turn out well."
-    jump weekend
+    
+    scene Black_Screen with fade
+    hide Janus with fade
+    "....."
+    "....."
+    menu:
+        "day 3":
+            jump weekend
 
 label weekend:
     scene Dorm_Day
@@ -718,16 +756,28 @@ label weekend:
 
     "Janus wakes up in the afternoon, groggily texting his friend good luck with his date before heading back to bed."
 
-    j "(Is it just me or am I more tired recently? Sure, I may have been working and skipped a few meals, but it’s nothing I haven’t done before, so why am I so exhausted and sore? Ugh, my head hurts… I’ll have to make sure to restock on medication some time this week…)"
+    j "(Is it just me or am I more tired recently? Why am I so exhausted and sore? Ugh, my head hurts… I’ll have to make sure to restock on medication some time this week…)"
 
     "Janus continues lying in bed as he receives a message back a while later, Alex apparently having been stood up."
 
     j "(That’s odd… I thought for sure she’d be there… Maybe something happened?)"
 
     "(I’m glad nothing bad happened to Alex, but I can’t help but worry about Vanessa, and possibly David. Maybe I’ll see them in class in a few days? Anyways, I have got to rest up, my head and body are killing me...)"
+    
+    scene Dorm_Night
+    show Janus at center
 
-    "..."
+    "Strange, I feel so tired anyways. Well might as well go to bed"
 
+    scene Black_Screen with fade
+    hide Janus with fade
+    "....."
+    "....."
+    menu:
+        "day 4":
+            jump day4
+
+label day4:
     "Sunday"
 
     "Janus wakes up late in the afternoon, head splitting from pain as he tries to recall information."
@@ -737,15 +787,21 @@ label weekend:
     "Janus relaxingly makes himself dinner, spending the remainder of his weekend catching up on work and hobbies before preparing for another grueling week of school."
 
     "..."
-    jump day_five_daytime
+    scene Black_Screen with fade
+    hide Janus with fade
+    "....."
+    "....."
+    menu:
+        "day 5":
+            jump day_five_daytime
 
 label day_five_daytime:
     scene Hallway
-    show Janus at right
+    show Janus_Smile at right
 
     "The entire school is in murmurs, nowhere near the excitement present on Friday as Janus confusingly makes his way to Alex, soon finding him."
 
-    show Alex at left
+    show Alex_Smile_Teeth at left
 
     j "Alex!"
 
@@ -755,7 +811,10 @@ label day_five_daytime:
 
     j "Hey, do you know why everyone looks so… gloomy?"
 
-    a "Seriously…? Did you not check your emails?"
+    hide Alex_Smile_Teeth
+    show Alex_Suprised at left
+
+    a "Seriously…? Did you not check your emails?"    
 
     j "I’ve sorta been out of it this weekend… Haha…"
 
@@ -790,7 +849,7 @@ label day_five_daytime:
     "The girl takes his hand and drags him with her, seemingly unfazed by the glances they receive as Janus quietly succumbs to his fate, too tired to put up much of a fight."
 
     scene Dorm_Day
-    show Janus at right
+    show Janus_Smile at right
     show Himeko at left
 
     j "So Himeko, what’s the issue you needed help with?"
@@ -837,8 +896,8 @@ label day_five_daytime:
 
     scene Forest_Night
 
-    show Janus at center
-    show Himeko at right
+    show Janus_Smile at center
+    show Himeko_Smile_Closed_Eyes at right
 
     j "Remind me why I’m the one walking first again?"
 
@@ -862,14 +921,14 @@ label day_five_daytime:
 
     "Janus slowly makes his way in, the sight he sees making his heart drop and blood run cold: one crude gravestone adorned with dried blood."
     show grave at center
-    show Janus at right
+    show Janus_Suprised at right
 
     "The next thing he sees is darkness."
 
     scene Black_Screen
     "....."
     "....."
-    show Janus at center
+    show Janus_Suprised at center
     j "(Am I in a dream again? What’s going on? And why does this bloody headache get worse every damn time?)"
 
     "Janus’ headache intensifies as flashbacks of distant memories resurface. Of his dying mother, of his missing dad, and now the forest."
@@ -889,9 +948,8 @@ label day_five_daytime:
     u "I’m Jack… And I’m also you…"
 
     scene Grove
-    show Jack at left
-    show Janus at right
-    show Himeko at center
+    show Jack_Smirk at left
+    show Janus_Suprised at right
 
     "Janus bolts awake, sweat pouring out of him like crazy as he hyperventilates, noticing a body next to him."
 
@@ -943,13 +1001,14 @@ menu choices:
 
 label Himeko_dies:
     scene Grove
-    show Jack at center
+    show Jack_Smirk at center
     ja "That’s it Jane. Let me handle it, as I’ve always have. I’ll make this world a better place for the both of us. Go and take a long nap…"
-    show Janus at left
+    show Janus_Angry at left
     j "No... No I won't let you make decisions anymore, I will decide what to do from now on."
-    ja "Sigh, do as you will, but dont come crying to me when things go wrong"
+    ja "What is done is done. Do as you will, but dont come crying to me when things go wrong"
     hide Jack with fade
     jump choice1
+
 menu choice1:
     "Hide the body":
         jump hide_evidence
@@ -957,7 +1016,7 @@ menu choice1:
         jump dorm_arrest
 label hide_evidence:
     scene Grove
-    show Jack at center
+    show Jack_Smirk at center
 
     ja "So you couldn't live with the consequence of our actions and you come running back to me. No matter. I'll do as I always has, for the both of us."
 
@@ -966,7 +1025,7 @@ label hide_evidence:
     ja "There we go. Nice and clean! Now run along back home Janus and always remember: I am always by your side."
 
     scene Dorm_Night with fade
-    show Janus at center
+    show Janus_Angry at center
 
     "Memories of Himeko’s screams, blood, and the cold, dark groves start piercing his head. "
 
@@ -986,7 +1045,7 @@ label hide_evidence:
 
 label dorm_arrest:
     scene Dorm_Night with fade
-    show Janus at center
+    show Janus_Angry at center
 
     "Memories of Himeko’s screams, blood, and the cold, dark groves start piercing his head. "
 
@@ -1013,10 +1072,10 @@ label dorm_arrest:
 label Himeko_lives:
     scene Grove
     show Janus at left
-    show Himeko at center
-    show Jack at right
+    show Himeko_Sleepy at center
+    show Jack_Angry at right
     ja "So that’s your choice... Foolish and arrogant until the very end... At least that’s the first time you didn’t run away."
-    hide Jack with fade
+    hide Jack_Angry with fade
     "Some color returns to Himeko. Her breathing is now audible."
     j "I have to get her to the nurse, quickly."
 
@@ -1031,17 +1090,20 @@ label Himeko_dies_day_three:
     "School Announcement “Due to the disappearance of students, there is now a curfew. All students must be in their dorm rooms by nighttime. An official detective has been called and is expected to arrive by tomorrow."
     "Every student will be sharply questioned regarding the disappearances.”"
     scene Rooftop
-    show Alex at left
-    show Janus at right
+    show Alex_Suprised at left
+    show Janus_Sad at right
     a "Janus! There you are! Did you hear the news? Himeko is now missing too."
 
     j "I know – I mean yeah…their disappearances must be linked together."
 
     a "Yeah just be careful at night! Any one of us could be next."
 
+    hide Alex_Suprised
+    show Alex at left
+
     j "And what about you? I haven’t heard from you these past few nights. Hanging out with your new girlfriend?"
 
-    a "Yeah I’ve been– wait a minute are you jealous?"
+    a "Yeah I’ve been – wait a minute are you jealous?"
 
     j "It feels like you’ve forgotten about me since Vanessa confessed to you!"
 
@@ -1083,9 +1145,9 @@ label Himeko_lives_day_three:
     "School Announcement “Last night Himeko was found near the end of the woods injured. Due to Himeko’s injuries and David’s disappearance, there is now a curfew. All students are advised to stay indoors and MUST be in their dorm rooms by nighttime." 
     "An official detective has been called and is expected to arrive by tomorrow. Every student will be sharply questioned regarding the disappearance of David and Himeko’s recent attack."
 
-    scene Rooftop 
-    show Alex at left
-    show Janus at right
+    scene Rooftop
+    show Alex_Suprised at left
+    show Janus_Sad at right
 
     a "Janus! There you are! Did you hear the news? Himeko is in the hospital. She was bleeding a lot when she was found. It sounds like she was attacked last night."
 
@@ -1102,6 +1164,9 @@ label Himeko_lives_day_three:
     a "Just be careful at night Jane. Any one of us could be next."
 
     j "And what about you? I haven’t heard from you these past few nights. Hanging out with your new girlfriend?"
+
+    hide Alex_Suprised
+    show Alex at left
 
     a "Yeah I’ve been– wait a minute are you jealous?"
 
@@ -1136,6 +1201,9 @@ label Himeko_lives_day_three:
     
     hide Alex
 
+    hide Janus_Sad
+    show Janus_Angry
+
     "If I can just make it out unscathed for two more days. I can go home. Winter break starts this weekend. If I can get away for two more days. I can leave this place."
     "I WON'T get arrested."
 
@@ -1143,7 +1211,7 @@ label Himeko_lives_day_three:
 
 label Himeko_dies_night_three:
     scene Dorm_Night
-    show Janus at center
+    show Janus_Sad at center
     "Janus paces back and forth in his room."
 
     j "I’m going to jail. They’re going to find out Jack, no I, killed them."
@@ -1163,10 +1231,10 @@ label Himeko_dies_night_three:
 label Himeko_visit:
     scene Hospital_Day
     show Janus at left
-    show Himeko at right
+    show Himeko_Sad at right
     "Himeko lays in a hospital bed. Her hair is tangled, her face and lips are pale from the lost of blood."
 
-    h "Who’s…who’s there?"
+    h "Who’s... who’s there?"
 
     j "Hey Himeko! It’s Janus."
 
@@ -1174,19 +1242,25 @@ label Himeko_visit:
 
     h "Janus..."
 
+    hide Himeko_Sad 
+    show Himeko_Shocked at right
+
     "A look of confusion, then fear falls on Himeko’s face."
 
     "‘She must remember something,’ Janus thinks. ‘She’s instinctively scared of me’."
 
     "Himeko sees the look of fear reflected on Janus’s face and composes herself."
 
+    hide Himeko_Shocked
+    show Himeko at right
+
     h "Janus! Ah, thank you for visiting me. I’ve been having visitors all day. It’s been nice, people here are so caring."
 
     "A sharp pain goes through Janus’s brain."
 
-    show Jack at center
+    show Jack_Angry at center
     ja "That smile is fake, Janus. She knows you know. She’s playing dumb. You have to eliminate her too! She’s going to rat you out the moment she can!"
-
+    
     j "Ah stop it! Go away!"
 
     h "What…?"
@@ -1206,7 +1280,7 @@ label Himeko_visit:
 
 label Himeko_lives_night_three:
     scene Dorm_Night
-    show Janus at center
+    show Janus_Sad at center
     "Janus tries to sleep that night, tossing and turning."
 
     j "She’s going to out me out eventually... and then I’ll be locked up for the rest of my life."
@@ -1219,8 +1293,8 @@ label Himeko_lives_night_three:
 
     scene Hospital_Night
 
-    show Janus at left
-    show Himeko at right
+    show Janus_Suprised at left
+    show Himeko_Sleepy at right
 
     "Janus regains consciousness, realizing he’s no longer in his room – he’s in the nurse’s room with Himeko, his hands held a pillow over her face."
 
@@ -1238,9 +1312,8 @@ menu hospital_menu:
 
 label good_hospital:
     scene Hospital_Night
-
     show Janus at left
-    show Himeko at right
+    show Himeko_Sleepy at right
     "Janus leaves the nurse’s room and sneaks back into his own room. The worry that Himeko will remember consumes him."
     hide Janus with fade
     jump day_four_good
@@ -1249,18 +1322,19 @@ label bad_hospital:
     scene Hospital_Night
 
     show Janus at left
-    show Himeko at right
+    show Himeko_Sleepy at right
     "Janus feels Jack take over his body and he puts the pillow over her face..."
     hide Janus with fade
-    show Jack with fade
+    show Jack_Angry with fade
     "Small fragments of consciousness pass him - the sound of Himeko choking, her wide eyes in shock - before his memory blackens out."
+    hide Himeko_Sleepy with fade
     jump day_four
 
 label day_four:
     scene Dorm_Day
-    show Janus at left
+    show Janus_Sad at left
     "Janus is huddled in a corner as he stares at his trembling fingertips, overcome with grief and guilt as his eyes and lungs burn from the anguish he is feeling."
-    show Jack at right
+    show Jack_Smirk at right
     ja "Excellent Janus..."
     ja "With this we have secured our livelihood and future..."
     j "No..."
@@ -1279,7 +1353,7 @@ menu choice:
 label take_over:
     scene Dorm_Day
     hide Janus with fade
-    show Jack at center
+    show Jack_Smirk at center
     ja "That's right Janus... Just leave everything to me... I'll make sure the world is a better place for the both of us..."
     ja "Why don't you take a long nap and let me take care of it all..."
    
@@ -1290,8 +1364,8 @@ label take_over:
 
 label day_four_good:
     scene Dorm_Day
-    show Janus at right
-    show Jack at left
+    show Janus_Angry at right
+    show Jack_Smirk at left
     ja "Are you an idiot? You just jeopardized both our futures! Why couldn't you just get rid of her?"
     j "Shut it, Jack. I've already decided. There's already too much blood on our hands. I refuse to dirty them anymore."
     ja "You...!"
@@ -1324,8 +1398,8 @@ label day_four_good:
     j "I'll do it without your help"
 
     scene Principle_Office
-    show Janus at left
-    show Detective at center #TODO
+    show Janus_Sad at left
+    show Detective at center 
     show Principal at right
 
     i "Hello Mr. Janus. I am Detective Thomas. As you have probably heard by now, some of your classmates have recently disappeared."
@@ -1347,7 +1421,7 @@ menu investigate_menu:
 label lie:
     scene Principle_Office
     show Janus at left
-    show Detective at center #TODO
+    show Detective at center
     show Principal at right
     j "I was with Alex that night. He’s my best friend."
 
@@ -1369,8 +1443,8 @@ label lie:
 
 label truth:
     scene Principle_Office
-    show Janus at left
-    show Detective at center #TODO
+    show Janus_Sad at left
+    show Detective at center 
     show Principal at right
     "Janus tells the detective the truth. About his alter ego, about what happened to Himeko and David."
 
@@ -1388,20 +1462,22 @@ label truth:
 
 label day_four_night:
     scene Dorm_Night
-    show Janus at left
+    show Janus_Sad at left
 
     j "That was stressful, but I got out of it fine."
 
-    show Jack at right
+    show Jack_Smile at right
+
     ja "This is temporary, we must silence others in order to protect us."
 
     j "No. Lets rest, we need rest in order to make it through to the break."
 
     "Knocks comes from the door"
 
-    hide Jack with fade
+    hide Jack_Smile with fade
     
     "Janus walks to the door and opens it, revealing Alex standing in the doorway."
+    
     show Alex at right
 
     a "Hey Jane, you doing alright? You don't look so good."
@@ -1442,7 +1518,7 @@ label day_four_night:
 
     hide Alex with fade
 
-    show Jack at right
+    show Jack_Suprised at right
 
     ja "Janus, it our perfect chance!"
 
@@ -1457,10 +1533,11 @@ menu day_4_choice:
         jump day_5_jail
     "Take action":
         jump take_action
+
 label take_action:
     scene Dorm_Night
-    show Janus at left
-    show Jack at right
+    show Janus_Angry at left
+    show Jack_Smirk at right
 
     j "ALRIGHT ALRIGHT I GET IT. Fine. Lets do it."
 
@@ -1500,8 +1577,8 @@ menu murder:
         jump No_murder
 label No_murder:
     scene Dorm_Night
-    show Janus at left
-    show Jack at right
+    show Janus_Angry_Talking at left
+    show Jack_Suprised at right
 
     j "No, I'm not going to do it. You've done enough already."
 
@@ -1518,15 +1595,21 @@ label No_murder:
 label A_murder:
     scene Dorm_Night
     show Janus at left
-    show Jack at right
+    show Jack_Smile at right
 
     ja "Alex is the right choice. He knows us too wel. He needs to go."
+
+    hide Janus
+    show Janus_Angry_Talking at left
 
     j "WHAT? NO??? WHAT ARE YOU SAYING?"
 
     ja "You know I'm right."
 
     j "You know what, this has gone too far. I'm going to turn myself in."
+
+    hide Jack_Smile
+    show Jack_Angry_Talking
 
     ja "Fine, I'll do it myself."
 
@@ -1537,13 +1620,16 @@ label A_murder:
 label V_murder:
     scene Dorm_Night
     show Janus at left
-    show Jack at right
+    show Jack_Smirk at right
 
     ja "Vanessa is the right choice. Remember how she said she was only with Alex for his money? She needs to go."
 
     j "But Alex loves..."
 
     ja "Do you want to see your friend suffer??? One way or another its not going to end well."
+    
+    hide Janus
+    show Janus_Sad at left
 
     j "..."
 
@@ -1556,8 +1642,8 @@ label V_murder:
 
 label S_murder:
     scene Dorm_Night
-    show Janus at left
-    show Jack at right
+    show Janus_Angry at left
+    show Jack_Smirk at right
 
     ja "Sam is the right choice. He bullied you alongsides David, do not let him go free for what he did to you."
 
@@ -1576,17 +1662,21 @@ label arrest:
 
     "Janus woke up to the sound of banging on his dorm door."
 
+    hide Janus
+    show Janus_Suprised at left
+
     "STUDENT JANUS. YOU ARE UNDER ARREST FOR THE SUSPISION OF ASSULT AND HOMICIDE. EXIT YOUR DORM WITH YOUR HANDS UP."
 
-    "Janus exits the dorm and was led to jail to await for his trial"
+    "Janus exits his dorm and was led to jail to await for his trial"
+
     jump jail_ending
 
 
 
 label G_murder:
     scene Dorm_Night
-    show Janus at left
-    show Jack at right
+    show Janus_Sad at left
+    show Jack_Smirk at right
 
     ja "Gwen is the right choice. Since Sam is going with her to the forest tomorrow, this is the perfect opportunity to frame him."
 
@@ -1603,17 +1693,23 @@ label G_murder:
 label H_murder:
     scene Dorm_Night
     show Janus at left
-    show Jack at right
+    show Jack_Smirk at right
 
     ja "Himeko is the right choice, who knows what she'll tell."
 
     "Hands shaking, Janus recalls the sensations that night in the forest as Himeko gasped for air."
+
+    hide Janus
+    show Janus_Angry_Talking at left
 
     j "No."
 
     ja "What?"
 
     j "I won't do it, I'm going to turn myself in tomorrow. This can't go on, I can't hurt anyone else."
+
+    hide Jack_Smirk
+    show Jack_Angry_Talking
 
     ja "Fine, I'll do it myself."
 
@@ -1629,8 +1725,8 @@ menu fight:
 
 label day_5_jail:
     scene Dorm_Night
-    show Janus at left
-    show Jack at right
+    show Janus_Angry at left
+    show Jack_Suprised at right
 
     j "No I'm not gonna do anything, you've already done enough damage. I'm turning myself in."
     
@@ -1648,22 +1744,24 @@ label day_5_jail:
 
 label day_5_ending:
     scene Hallway
-    show Janus at left
+    show Janus_Sad at left
     "There are a lot of hushed whispers during the day. Janus walks around, trying to hear the gossip."
-    show Vanessa at right
+    
+    show Vanessa_Shocked at right
 
     vf "They locked up Sam! Apparently the detective thought he was the most suspicious."
 
     v "Sam huh? I’d always thought it would be Janus. Who knows what he’s thinking with that creepy demeanor of his."
 
-    hide Vanessa with fade
+    hide Vanessa_Shocked with fade
 
     "Janus starts breaking into sweat."
 
     j "Sam is locked up because of me..."
 
     "Janus and Alex meet up to say their goodbyes before winter break."
-    show Alex at right
+    
+    show Alex_Smile_Closed_Eyes at right
 
     j "I’ll miss you man. Thank you for being my one true friend here."
 
@@ -1680,7 +1778,11 @@ label day_5_ending:
 label safe_end:
     scene Dorm_Night
 
+    show Janus_Sad at left
+
     j "I can’t believe it, I got away. I get to go away from this place, but Sam’s still there."
+
+    show Jack_Smirk at right
 
     ja "See, aren’t you glad? I got rid of the school bully, got his crony locked up in jail."
 
@@ -1710,8 +1812,8 @@ label safe_end:
 
 label pre_jail_scene:
     scene Dorm_Day
-    show Jack at right
-    show Janus at left
+    show Jack_Suprised at right
+    show Janus_Angry at left
     j "I'm tired of being trampled over. To be forced to be witness. That's why I'm going to make things right."
     j "I'm turning myself in. You can't stop me Jack. I've made up my mind."
     ja "You! You would trample over everything we've been through just to satisfy your stupid sense of justice!?"
@@ -1724,7 +1826,7 @@ label pre_jail_scene:
 
 label jail_ending:
     scene Prison
-    show Janus at center
+    show Janus_Sad at center
 
     j "When did things go so wrong? I just wanted to live a normal life..."
     
@@ -1732,9 +1834,13 @@ label jail_ending:
 
     j "I won't let you. Not again, not ever for as long as I live."
 
+    show Jack at right
+
     ja "Remember that I am you, and you are me. We will always be together for as long as we live."
 
     "Jack's presence fades, but Janus knows with certainty that he will be back."
+
+    hide Jack
 
     scene Black_Screen with fade
 
