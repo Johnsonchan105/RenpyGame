@@ -15,46 +15,36 @@ define ja = Character("Jack")
 define s_a = Character("Student A")
 define s_b = Character("Student B")
 define u = Character("Unknown")
-define d = Character("Detective")
-
-# default
-default alive_H = True
-default alive_S = True
-default alive_Ma = True
-default alive_P = True
-default alive_V = True
-default alive_D = True
-default alive_Vf = True
-default alive_A = True
+define i = Character("Detective")
 
 # images of characters
 image Janus:
     "janus_smile_one.png"
-    zoom 0.5
+    zoom 0.6
 image Himeko:
     "himeko_smile_one.png"
-    zoom 0.5
+    zoom 0.6
 image Alex:
     "alex_smile_one.png"
-    zoom 0.5
+    zoom 0.45
 image David:
     "david_smile_one.png"
-    zoom 0.5
+    zoom 0.6
 image Sam:
     "sam_smile_one.png"
-    zoom 0.5
+    zoom 0.6
 image Vanessa:
     "vanessa_smile_one.png"
-    zoom 0.5
+    zoom 0.6
 image Principal:
     "principal.png"
-    zoom 0.5
+    zoom 0.45
 image Adams:
     "adams_smile_one.png"
-    zoom 0.5
+    zoom 0.6
 image Jack:
-    "janus_smile_one.png"
-    zoom 0.5
+    "jack_normal.png"
+    zoom 0.6
 image grave:
     "grave.png"
 image Police:
@@ -1103,20 +1093,20 @@ label day_four:
     j "I know..."
 
     jump choice
-menu choice
+menu choice:
     "I just can't accept this outcome...":
         jump pre_jail_scene
     "It just all hurts so much...":
         jump take_over
 
-'''
-    "I'm just potecting myself...":
-        jump evil_path
-#TODO
-label evil_path:
-'''
 
-label take_over
+#    "I'm just potecting myself...":
+#        jump evil_path
+#TODO
+#label evil_path:
+
+
+label take_over:
     scene Dorm_Day
     hide Janus with fade
     show Jack at center
@@ -1193,7 +1183,7 @@ label lie:
 
     i "I see. And have you noticed any tensions between Himeko and David and your other classmates?"
 
-    j "Yeah. Sam is one of David’s cronies–I mean friends. They didn’t look too happy with each other the last time I saw them."	
+    j "Yeah.    Sam is one of David’s cronies–I mean friends. They didn’t look too happy with each other the last time I saw them."
 
     "The detective writes in his notepad."
 
@@ -1213,7 +1203,7 @@ label truth:
     show Detective at center #TODO
     show Principal at right
     "Janus tells the detective the truth. About his alter ego, about what happened to Himeko and David."
-		
+
     "Janus feels a migraine splitting his head once more."
 
     ja "How can you be so foolish! You’ve thrown away all our hard work. All the work I’ve done to keep us safe."
@@ -1495,13 +1485,13 @@ label day_5_ending:
     vf "They locked up Sam! Apparently the detective thought he was the most suspicious."
 
     v "Sam huh? I’d always thought it would be Janus. Who knows what he’s thinking with that creepy demeanor of his."
-	
+
     hide Vanessa with fade
 
     "Janus starts breaking into sweat."
 
     j "Sam is locked up because of me..."
-	
+
     "Janus and Alex meet up to say their goodbyes before winter break."
     show Alex at right
 
@@ -1548,7 +1538,7 @@ label safe_end:
     "The end"
     return
 
-label pre_jail_scene
+label pre_jail_scene:
     scene Dorm_Day
     show Jack at right
     show Janus at left
