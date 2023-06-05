@@ -52,6 +52,7 @@ image Police:
     zoom 1.5
 image Detective:
     "detective_neutral.png"
+    zoom 1.2
 
 # background images
 image Classroom_Day:
@@ -85,11 +86,16 @@ image Grove:
     xzoom 3
 image Hospital_Day:
     "hospital_day.jpg"
-    xzoom 3
+    xzoom 1.5
+    yzoom 1.5
 image Hospital_Night:
     "hospital_night.jpg"
+    xzoom 1.5
+    yzoom 1.5
 image Prison:
     "Prison.png"
+    xzoom 1.5
+    yzoom 1.5
 
 
 # The game starts here.
