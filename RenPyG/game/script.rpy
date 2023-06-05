@@ -19,22 +19,165 @@ define i = Character("Detective")
 
 # images of characters
 image Janus:
+    "janus_normal.png"
+    zoom 0.6
+image Janus_Angry_Talking:
+    "janus_angry_two.png"
+    zoom 0.6
+image Janus_Sad:
+    "janus_sad.png"
+    zoom 0.6
+image Janus_Angry:
+    "janus_angry_one.png"
+    zoom 0.6
+image Janus_Laugh:
+    "janus_laugh.png"
+    zoom 0.6
+image Janus_Smirk:
+    "janus_smirk.png"
+    zoom 0.6
+image Janus_Suprised:
+    "janus_suprised.png"
+    zoom 0.6
+image Janus_Smile:
     "janus_smile_one.png"
     zoom 0.6
+image Janus_Smile_Teeth:
+    "janus_smile_three.png"
+    zoom 0.6
+image Janus_Smile_Closed_Eyes:
+    "janus_smile_two.png"
+    zoom 0.6
 image Himeko:
-    "himeko_smile_one.png"
+    "himeko_normal.png"
+    zoom 0.6
+image Himeko_Angry:
+    "himeko_angry.png"
+    zoom 0.6
+image Himeko_Annoyed:
+    "himeko_annoyed.png"
+    zoom 0.6
+image Himeko_Delighted:
+    "himeko_delighted.png"
+    zoom 0.6
+image Himeko_Laugh:
+    "himeko_laugh.png"
+    zoom 0.6
+image Himeko_Sad:
+    "himeko_sad.png"
+    zoom 0.6
+image Himeko_Shocked:
+    "himeko_shocked.png"
+    zoom 0.6
+image Himeko_Smug:
+    "himeko_smug.png"
+    zoom 0.6
+image Himeko_Smile_Teeth:
+    "himeko_smile_three.png"
+    zoom 0.6
+image Himeko_Smile_Closed_Eyes:
+    "himeko_smile_two.png"
     zoom 0.6
 image Alex:
-    "alex_smile_one.png"
+    "alex_normal.png"
+    zoom 0.45
+image Alex_Angry_Talking:
+    "alex_angry_two.png"
+    zoom 0.45
+image Alex_Angry:
+    "alex_angry_one.png"
+    zoom 0.45
+image Alex_Laugh:
+    "alex_laugh.png"
+    zoom 0.45
+image Alex_Sad:
+    "alex_sad.png"
+    zoom 0.45
+image Alex_Smile_Teeth:
+    "alex_smile_three.png"
+    zoom 0.45
+image Alex_Smile_Closed_Eyes:
+    "alex_smile_two.png"
+    zoom 0.45
+image Alex_Smirk:
+    "alex_smirk.png"
+    zoom 0.45
+image Alex_Suprised:
+    "alex_suprised.png"
     zoom 0.45
 image David:
     "david_smile_one.png"
     zoom 0.6
+image David_Smile_Teeth:
+    "david_smile_three.png"
+    zoom 0.6
+image David_Smile_Closed_Eyes:
+    "david_smile_two.png"
+    zoom 0.6
+image David_Angry:
+    "david_angry_one.png"
+    zoom 0.6
+image David_Laugh:
+    "david_laugh.png"
+    zoom 0.6
+image David_Sad:
+    "david_sad.png"
+    zoom 0.6
+image David_Smirk:
+    "david_smirk.png"
+    zoom 0.6
+image David_Suprised:
+    "david_suprised.png"
 image Sam:
-    "sam_smile_one.png"
+    "sam_normal.png"
+    zoom 0.6
+image Sam_Smirk:
+    "sam_smirk.png"
+    zoom 0.6
+image Sam_Suprised:
+    "sam_suprised.png"
+    zoom 0.6
+image Sam_Sad:
+    "sam_sad.png"
+    zoom 0.6
+image Sam_Laugh:
+    "sam_laugh.png"
+    zoom 0.6
+image Sam_Angry_Talking:
+    "sam_angry_two.png"
+    zoom 0.6
+image Sam_Angry:
+    "sam_angry_one.png"
     zoom 0.6
 image Vanessa:
-    "vanessa_smile_one.png"
+    "vanessa_normal.png"
+    zoom 0.6
+image Vanessa_Angry:
+    "vanessa_angry.png"
+    zoom 0.6
+image Vanessa_Annoyed:
+    "vanessa_annoyed.png"
+    zoom 0.6
+image Vanessa_Delighted:
+    "vanessa_delighted.png"
+    zoom 0.6
+image Vanessa_Laugh:
+    "vanessa_laugh.png"
+    zoom 0.6
+image Vanessa_Sad:
+    "vanessa_sad.png"
+    zoom 0.6
+image Vanessa_Shocked:
+    "vanessa_shocked.png"
+    zoom 0.6
+image Vanessa_Smug:
+    "vanessa_smug.png"
+    zoom 0.6
+image Vanessa_Smile_Teeth:
+    "vanessa_smile_three.png"
+    zoom 0.6
+image Vanessa_Smile_Closed_Eyes:
+    "vanessa_smile_two.png"
     zoom 0.6
 image Principal:
     "principal.png"
@@ -44,6 +187,24 @@ image Adams:
     zoom 0.6
 image Jack:
     "jack_normal.png"
+    zoom 0.6
+image Jack_Angry_Talking:
+    "jack_angry_two.png"
+    zoom 0.6
+image Jack_Sad:
+    "jack_sad.png"
+    zoom 0.6
+image Jack_Angry:
+    "jack_angry_one.png"
+    zoom 0.6
+image Jack_Smirk:
+    "jack_smirk.png"
+    zoom 0.6
+image Jack_Suprised:
+    "jack_suprised.png"
+    zoom 0.6
+image Jack_Smile:
+    "jack_smile_one.png"
     zoom 0.6
 image grave:
     "grave.png"
