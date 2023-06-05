@@ -130,7 +130,7 @@ image David_Smirk:
     "david_smirk.png"
     zoom 0.6
 image David_Suprised:
-    "david_suprised.png"
+    "david_surprised.png"
 image Sam:
     "sam_normal.png"
     zoom 0.6
@@ -138,7 +138,7 @@ image Sam_Smirk:
     "sam_smirk.png"
     zoom 0.6
 image Sam_Suprised:
-    "sam_suprised.png"
+    "sam_surprised.png"
     zoom 0.6
 image Sam_Sad:
     "sam_sad.png"
