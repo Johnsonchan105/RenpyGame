@@ -50,6 +50,8 @@ image grave:
 image Police:
     "police.png"
     zoom 1.5
+image Detective:
+    "detective_neutral.png"
 
 # background images
 image Classroom_Day:
@@ -81,6 +83,13 @@ image Grove:
     "grove.jpeg"
     yzoom 2
     xzoom 3
+image Hospital_Day:
+    "hospital_day.jpg"
+image Hospital_Night:
+    "hospital_night.jpg"
+image Prison:
+    "Prison.png"
+
 
 # The game starts here.
 label start:
@@ -984,7 +993,7 @@ label Himeko_dies_night_three:
     jump day_four
 
 label Himeko_visit:
-    scene hospital
+    scene Hospital_Day
     show Janus at left
     show Himeko at right
     "Himeko lays in a hospital bed. Her hair is tangled, her face and lips are pale from the lost of blood."
@@ -1040,7 +1049,7 @@ label Himeko_lives_night_three:
 
     "..."
 
-    scene Hospital
+    scene Hospital_Night
 
     show Janus at left
     show Himeko at right
@@ -1060,7 +1069,7 @@ menu hospital_menu:
         jump bad_hospital
 
 label good_hospital:
-    scene Hospital
+    scene Hospital_Night
 
     show Janus at left
     show Himeko at right
@@ -1069,7 +1078,7 @@ label good_hospital:
     jump day_four_good
 
 label bad_hospital:
-    scene Hospital
+    scene Hospital_Night
 
     show Janus at left
     show Himeko at right
@@ -1098,13 +1107,6 @@ menu choice:
         jump pre_jail_scene
     "It just all hurts so much...":
         jump take_over
-
-
-#    "I'm just potecting myself...":
-#        jump evil_path
-#TODO
-#label evil_path:
-
 
 label take_over:
     scene Dorm_Day
@@ -1553,7 +1555,7 @@ label pre_jail_scene:
     jump jail_ending
 
 label jail_ending:
-    scene Jail
+    scene Prison
     show Janus at center
 
     j "When did things go so wrong? I just wanted to live a normal life..."
