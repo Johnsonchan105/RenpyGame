@@ -85,6 +85,7 @@ image Grove:
     xzoom 3
 image Hospital_Day:
     "hospital_day.jpg"
+    xzoom 3
 image Hospital_Night:
     "hospital_night.jpg"
 image Prison:
